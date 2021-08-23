@@ -4,13 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.recyclerview.widget.GridLayoutManager
 import e_icon.teamw.natureprotectors.databinding.ActivityGardenBlueprintBinding
 
 private lateinit var binding: ActivityGardenBlueprintBinding
 
 class GardenBlueprint : AppCompatActivity() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityGardenBlueprintBinding.inflate(layoutInflater)
