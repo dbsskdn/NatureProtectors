@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="countryDropdown">
+        <item>Korea</item>
+        <item>Uzbekistan</item>
+    </string-array>
+</resources>

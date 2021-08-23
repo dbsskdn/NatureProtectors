@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">NatureProtectors</string>
+    <string name="StringValueForImageView">이미지 안 열</string>
+    <string name="StringValueForImageButton">이미지버 안 열</string>
+    <string name="StringValueForSpinner">스피너</string>
+    <string name="StringValueForMapView">맵</string>
+    <string name="username">Username</string>
+    <string name="gardenName">Garden Name</string>
+    <string name="gardenRegistrationSmartySays">Write your garden name and choose location</string>
+    <string name="gardenRegistrationProgress" tools:ignore="TypographyFractions">1/3</string>
+    <string name="plantsSelectionProgress">2/3</string>
+    <string name="gardenBlueprintProgress">3/3</string>
+    <string name="plantsSelectionTomato">Tomato</string>
+    <string name="plantsSelectionPotato">Potato</string>
+    <string name="plantsSelectionLettuce">Lettuce</string>
+    <string name="plantsSelectionCherry">Cherry</string>
+    <string name="plantsSelectionSunflower">Sunflower</string>
+    <string name="plantsSelectionSmartySays">Select plants what you want to plant in your garden</string>
+    <string name="title_activity_garden_blueprint">GardenBlueprint</string>
+
+</resources>

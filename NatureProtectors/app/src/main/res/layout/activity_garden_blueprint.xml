@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GardenBlueprint">
+
+    <ImageView
+        android:id="@+id/garden_blueprint_smarty_char"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/StringValueForImageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/garden_registration_smarty_char"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/garden_blueprint_progress_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/StringValueForImageButton"
+        android:minWidth="48dp"
+        android:minHeight="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_blueprint_progress_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_progress_text"
+        app:srcCompat="@drawable/progress_prev"
+        tools:ignore="DuplicateSpeakableTextCheck,MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/garden_blueprint_progress_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/StringValueForImageButton"
+        android:minWidth="48dp"
+        android:minHeight="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_blueprint_progress_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_progress_text"
+        app:srcCompat="@drawable/progress_next"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/garden_blueprint_progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/gardenBlueprintProgress"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/garden_blueprint_drag_plants_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/StringValueForImageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/garden_blueprint_drag_plants_bg"
+        tools:ignore="ImageContrastCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/garden_blueprint_progress_next"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+    <LinearLayout
+        android:id="@+id/garden_blueprint_drag_plants"
+        android:layout_width="248dp"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:gravity="start"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_blueprint_drag_plants_bg"
+        app:layout_constraintEnd_toEndOf="@+id/garden_blueprint_drag_plants_bg"
+        app:layout_constraintStart_toStartOf="@+id/garden_blueprint_drag_plants_bg"
+        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_drag_plants_bg">
+
+        <ImageView
+            android:id="@+id/garden_blueprint_drag_plants_tomato"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/StringValueForImageView"
+            android:visibility="gone"
+            app:srcCompat="@drawable/garden_blueprint_drag_plants_tomato" />
+
+        <ImageView
+            android:id="@+id/garden_blueprint_drag_plants_potato"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/StringValueForImageView"
+            android:visibility="gone"
+            app:srcCompat="@drawable/garden_blueprint_drag_plants_potato" />
+
+        <ImageView
+            android:id="@+id/garden_blueprint_drag_plants_lettuce"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/StringValueForImageView"
+            android:visibility="gone"
+            app:srcCompat="@drawable/garden_blueprint_drag_plants_lettuce" />
+
+        <ImageView
+            android:id="@+id/garden_blueprint_drag_plants_cherry"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/StringValueForImageView"
+            android:visibility="gone"
+            app:srcCompat="@drawable/garden_blueprint_drag_plants_cherry" />
+
+        <ImageView
+            android:id="@+id/garden_blueprint_drag_plants_sunflower"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/StringValueForImageView"
+            android:visibility="gone"
+            app:srcCompat="@drawable/garden_blueprint_drag_plants_sunflower" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

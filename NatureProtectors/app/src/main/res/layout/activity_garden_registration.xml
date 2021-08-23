@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GardenRegistration"
+    tools:ignore="LabelFor">
+
+    <ImageView
+        android:id="@+id/garden_registration_garden_name_inputfield"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:contentDescription="@string/StringValueForImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/registration_inputfield"
+        tools:ignore="ImageContrastCheck" />
+
+    <EditText
+        android:id="@+id/garden_registration_garden_name_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/gardenName"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_registration_garden_name_inputfield"
+        app:layout_constraintStart_toStartOf="@+id/garden_registration_garden_name_inputfield"
+        app:layout_constraintTop_toTopOf="@+id/garden_registration_garden_name_inputfield"
+        android:importantForAutofill="no" />
+
+    <ImageView
+        android:id="@+id/garden_registration_smarty_char"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/StringValueForImageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/garden_registration_garden_location"
+        app:srcCompat="@drawable/garden_registration_smarty_char"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/garden_registration_smarty_says_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/StringValueForImageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/garden_registration_garden_location"
+        app:srcCompat="@drawable/garden_registration_smarty_says_background"
+        tools:ignore="ImageContrastCheck" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/garden_registration_garden_location"
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/StringValueForMapView"
+        app:layout_constraintBottom_toTopOf="@+id/garden_registration_smarty_says_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/garden_registration_garden_name_inputfield"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/garden_registration_smarty_says_text"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/gardenRegistrationSmartySays"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_registration_smarty_says_bg"
+        app:layout_constraintEnd_toEndOf="@+id/garden_registration_smarty_says_bg"
+        app:layout_constraintStart_toStartOf="@+id/garden_registration_smarty_says_bg"
+        app:layout_constraintTop_toTopOf="@+id/garden_registration_smarty_says_bg" />
+
+    <ImageButton
+        android:id="@+id/garden_registration_progress_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/StringValueForImageButton"
+        android:minWidth="48dp"
+        android:minHeight="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_registration_progress_text"
+        app:layout_constraintEnd_toEndOf="@+id/garden_registration_garden_name_inputfield"
+        app:layout_constraintTop_toTopOf="@+id/garden_registration_progress_text"
+        app:srcCompat="@drawable/progress_next" />
+
+    <TextView
+        android:id="@+id/garden_registration_progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/gardenRegistrationProgress"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

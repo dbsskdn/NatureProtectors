@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="e_icon.teamw.natureprotectors" >
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NatureProtectors" >
+        <activity
+            android:name=".GardenBlueprint"
+            android:exported="true"
+            android:label="@string/title_activity_garden_blueprint"
+            android:theme="@style/Theme.NatureProtectors.NoActionBar" />
+        <activity
+            android:name=".PlantsSelection"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDEPEv8t1a-77e2q2cC5eql5UMCE1pXyGY" />
+
+        <activity
+            android:name=".GardenRegistration"
+            android:exported="true" />
+        <activity
+            android:name=".UserRegistration"
+            android:exported="true" />
+        <activity
+            android:name=".License"
+            android:exported="true" />
+        <activity
+            android:name=".Start"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
