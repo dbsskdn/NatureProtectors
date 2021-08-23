@@ -2,21 +2,18 @@ package e_icon.teamw.natureprotectors
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.recyclerview.widget.GridLayoutManager
 import e_icon.teamw.natureprotectors.databinding.ActivityGardenBlueprintBinding
 
 private lateinit var binding: ActivityGardenBlueprintBinding
+var guidelinePlant = ""
 
 class GardenBlueprint : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityGardenBlueprintBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var gardenBlueprintGridColumn = 6
-        var gardenBlueprintGridRow = 6
 
         gardenPlants.forEach {
             when (it) {
@@ -33,6 +30,34 @@ class GardenBlueprint : AppCompatActivity() {
             startActivity(plantsSelectionIntent)
         }
 
+        binding.gardenBlueprintDragPlantsTomato.setOnClickListener {
+            guidelinePlant = "tomato"
+            goToGuideline()
+        }
 
+        binding.gardenBlueprintDragPlantsPotato.setOnClickListener {
+            guidelinePlant = "potato"
+            goToGuideline()
+        }
+
+        binding.gardenBlueprintDragPlantsLettuce.setOnClickListener {
+            guidelinePlant = "lettuce"
+            goToGuideline()
+        }
+
+        binding.gardenBlueprintDragPlantsCherry.setOnClickListener {
+            guidelinePlant = "cherry"
+            goToGuideline()
+        }
+
+        binding.gardenBlueprintDragPlantsSunflower.setOnClickListener {
+            guidelinePlant = "sunflower"
+            goToGuideline()
+        }
+    }
+
+    private fun goToGuideline() {
+        val growguidelineIntent = Intent(this, GrowGuideline::class.java)
+        startActivity(growguidelineIntent)
     }
 }

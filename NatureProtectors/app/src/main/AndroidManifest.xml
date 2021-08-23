@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NatureProtectors">
         <activity
+            android:name=".GrowGuideline"
+            android:exported="true" />
+        <activity
             android:name=".GardenInfo"
             android:exported="true" />
         <activity
