@@ -2,6 +2,7 @@ package e_icon.teamw.natureprotectors
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
@@ -14,6 +15,8 @@ class GardenBlueprint : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityGardenBlueprintBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        var gardenBlueprintGridColumn = 6
+        var gardenBlueprintGridRow = 6
 
         gardenPlants.forEach {
             when (it) {
@@ -29,5 +32,7 @@ class GardenBlueprint : AppCompatActivity() {
             val plantsSelectionIntent = Intent(this, PlantsSelection::class.java)
             startActivity(plantsSelectionIntent)
         }
+
+
     }
 }

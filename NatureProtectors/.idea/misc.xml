@@ -8,7 +8,7 @@
         <entry key="app/src/main/res/drawable/plants_selection_checkbox.xml" value="0.43385416666666665" />
         <entry key="app/src/main/res/font/fonts.xml" value="0.5744791666666667" />
         <entry key="app/src/main/res/layout/ActivitiyMainBinding.xml" value="0.5359375" />
-        <entry key="app/src/main/res/layout/activity_garden_blueprint.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_garden_blueprint.xml" value="0.75" />
         <entry key="app/src/main/res/layout/activity_garden_registration.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_license.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.55" />

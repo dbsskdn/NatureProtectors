@@ -73,6 +73,65 @@
         app:srcCompat="@drawable/garden_blueprint_drag_plants_bg"
         tools:ignore="ImageContrastCheck" />
 
+    <ImageButton
+        android:id="@+id/garden_blueprint_grid_decline_column"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/StringValueForImageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_blueprint_plan"
+        app:layout_constraintStart_toEndOf="@+id/garden_blueprint_plan"
+        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_plan"
+        app:srcCompat="@drawable/garden_blueprint_control_grid"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/garden_blueprint_grid_decline_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/StringValueForImageButton"
+        android:rotation="90"
+        app:layout_constraintEnd_toEndOf="@+id/garden_blueprint_plan"
+        app:layout_constraintStart_toStartOf="@+id/garden_blueprint_plan"
+        app:layout_constraintTop_toBottomOf="@+id/garden_blueprint_plan"
+        app:srcCompat="@drawable/garden_blueprint_control_grid"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/garden_blueprint_grid_increase_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/StringValueForImageButton"
+        android:rotation="-90"
+        app:layout_constraintEnd_toEndOf="@+id/garden_blueprint_plan"
+        app:layout_constraintStart_toStartOf="@+id/garden_blueprint_plan"
+        app:layout_constraintTop_toBottomOf="@+id/garden_blueprint_plan"
+        app:srcCompat="@drawable/garden_blueprint_control_grid"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/garden_blueprint_grid_increase_column"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="40dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/StringValueForImageButton"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_blueprint_plan"
+        app:layout_constraintStart_toEndOf="@+id/garden_blueprint_plan"
+        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_plan"
+        app:srcCompat="@drawable/garden_blueprint_control_grid"
+        tools:ignore="TouchTargetSizeCheck" />
+
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/garden_blueprint_plan"
         android:layout_width="wrap_content"
@@ -85,7 +144,18 @@
         app:layout_constraintTop_toBottomOf="@+id/garden_blueprint_progress_next">
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect"
+            android:id="@+id/garden_blueprint_grid_rect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/StringValueForImageView"
+            android:padding="6dp"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/garden_blueprint_plan_rect"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/garden_blueprint_grid_rect2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -94,7 +164,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect2"
+            android:id="@+id/garden_blueprint_grid_rect3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -103,7 +173,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect3"
+            android:id="@+id/garden_blueprint_grid_rect4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -112,7 +182,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect4"
+            android:id="@+id/garden_blueprint_grid_rect5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -121,7 +191,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect5"
+            android:id="@+id/garden_blueprint_grid_rect6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -130,7 +200,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect6"
+            android:id="@+id/garden_blueprint_grid_rect7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -139,7 +209,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect14"
+            android:id="@+id/garden_blueprint_grid_rect8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -148,7 +218,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect15"
+            android:id="@+id/garden_blueprint_grid_rect9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -157,7 +227,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect16"
+            android:id="@+id/garden_blueprint_grid_rect10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -166,7 +236,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect17"
+            android:id="@+id/garden_blueprint_grid_rect11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -175,7 +245,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect18"
+            android:id="@+id/garden_blueprint_grid_rect12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -184,7 +254,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect19"
+            android:id="@+id/garden_blueprint_grid_rect13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -193,7 +263,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect20"
+            android:id="@+id/garden_blueprint_grid_rect14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -202,7 +272,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect21"
+            android:id="@+id/garden_blueprint_grid_rect15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -211,7 +281,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect22"
+            android:id="@+id/garden_blueprint_grid_rect16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -220,7 +290,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect23"
+            android:id="@+id/garden_blueprint_grid_rect17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -229,7 +299,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect24"
+            android:id="@+id/garden_blueprint_grid_rect18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -238,7 +308,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect25"
+            android:id="@+id/garden_blueprint_grid_rect19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -247,7 +317,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect26"
+            android:id="@+id/garden_blueprint_grid_rect20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -256,7 +326,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect27"
+            android:id="@+id/garden_blueprint_grid_rect21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -265,7 +335,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect28"
+            android:id="@+id/garden_blueprint_grid_rect22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -274,7 +344,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect29"
+            android:id="@+id/garden_blueprint_grid_rect23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -283,7 +353,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect30"
+            android:id="@+id/garden_blueprint_grid_rect24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -292,7 +362,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect31"
+            android:id="@+id/garden_blueprint_grid_rect25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -301,7 +371,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect32"
+            android:id="@+id/garden_blueprint_grid_rect26"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -310,7 +380,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect33"
+            android:id="@+id/garden_blueprint_grid_rect27"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -319,7 +389,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect34"
+            android:id="@+id/garden_blueprint_grid_rect28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -328,7 +398,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect35"
+            android:id="@+id/garden_blueprint_grid_rect29"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -337,7 +407,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect36"
+            android:id="@+id/garden_blueprint_grid_rect30"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -346,7 +416,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect37"
+            android:id="@+id/garden_blueprint_grid_rect31"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -355,7 +425,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect38"
+            android:id="@+id/garden_blueprint_grid_rect32"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -364,7 +434,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect39"
+            android:id="@+id/garden_blueprint_grid_rect33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -373,7 +443,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect40"
+            android:id="@+id/garden_blueprint_grid_rect34"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -382,7 +452,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect41"
+            android:id="@+id/garden_blueprint_grid_rect35"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -391,7 +461,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/garden_blueprint_plan_rect42"
+            android:id="@+id/garden_blueprint_grid_rect36"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/StringValueForImageView"
@@ -399,14 +469,6 @@
             app:srcCompat="@drawable/garden_blueprint_plan_rect"
             tools:ignore="ImageContrastCheck" />
 
-        <ImageView
-            android:id="@+id/garden_blueprint_plan_rect43"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
     </androidx.gridlayout.widget.GridLayout>
 
     <LinearLayout
