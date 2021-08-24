@@ -48,19 +48,10 @@ class UserRegistration : AppCompatActivity() {
         binding.userRegistrationCountryDropdown.dropDownVerticalOffset = dipToPixels().toInt()
         var userCountrySelected = false
 
-
         binding.userRegistrationCountryDropdown.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                when(position) {
-                    0   ->  {
-                        userCountry = countryDropdownItems[0]
-                        userCountrySelected = true
-                    }
-                    1   ->  {
-                        userCountry = countryDropdownItems[1]
-                        userCountrySelected = true
-                    }
-                }
+                userCountry = binding.userRegistrationCountryDropdown.getItemAtPosition(position).toString()
+                userCountrySelected = true
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {

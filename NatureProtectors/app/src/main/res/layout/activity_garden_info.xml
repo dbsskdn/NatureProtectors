@@ -6,4 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".GardenInfo">
 
+    <ImageButton
+        android:id="@+id/garden_blueprint_progress_prev2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/StringValueForImageButton"
+        android:minWidth="48dp"
+        android:minHeight="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/progress_prev"
+        tools:ignore="DuplicateSpeakableTextCheck,MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,8 +15,8 @@ class Start : AppCompatActivity() {
 
         binding.startStartButton.setOnClickListener {
             if (!isRegistered){
-            val userRegistrationIntent = Intent(this, UserRegistration::class.java)
-            startActivity(userRegistrationIntent)
+                val userRegistrationIntent = Intent(this, UserRegistration::class.java)
+                startActivity(userRegistrationIntent)
             }
         }
 

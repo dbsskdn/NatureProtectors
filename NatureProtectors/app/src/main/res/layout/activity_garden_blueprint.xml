@@ -73,6 +73,379 @@
         app:srcCompat="@drawable/garden_blueprint_drag_plants_bg"
         tools:ignore="ImageContrastCheck" />
 
+    <TableLayout
+        android:id="@+id/garden_blueprint_blueprint_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="6dp"
+        android:shrinkColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/garden_blueprint_progress_next">
+
+        <TableRow
+            android:id="@+id/garden_blueprint_blueprint_table_row_6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/garden_blueprint_blueprint_table_row_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/garden_blueprint_blueprint_table_row_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/garden_blueprint_blueprint_table_row_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/garden_blueprint_blueprint_table_row_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/garden_blueprint_blueprint_table_row_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/garden_blueprint_blueprint_table_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageView"
+                android:padding="6dp"
+                app:srcCompat="@drawable/garden_blueprint_plan_rect"
+                tools:ignore="ImageContrastCheck" />
+        </TableRow>
+
+    </TableLayout>
+
     <ImageButton
         android:id="@+id/garden_blueprint_grid_decline_column"
         android:layout_width="wrap_content"
@@ -81,9 +454,10 @@
         android:layout_marginTop="40dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/StringValueForImageButton"
-        app:layout_constraintBottom_toBottomOf="@+id/garden_blueprint_plan"
-        app:layout_constraintStart_toEndOf="@+id/garden_blueprint_plan"
-        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_plan"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_blueprint_blueprint_table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/garden_blueprint_blueprint_table"
+        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_blueprint_table"
         app:srcCompat="@drawable/garden_blueprint_control_grid"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -91,14 +465,13 @@
         android:id="@+id/garden_blueprint_grid_decline_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="40dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/StringValueForImageButton"
         android:rotation="90"
-        app:layout_constraintEnd_toEndOf="@+id/garden_blueprint_plan"
-        app:layout_constraintStart_toStartOf="@+id/garden_blueprint_plan"
-        app:layout_constraintTop_toBottomOf="@+id/garden_blueprint_plan"
+        app:layout_constraintEnd_toEndOf="@+id/garden_blueprint_blueprint_table"
+        app:layout_constraintStart_toStartOf="@+id/garden_blueprint_blueprint_table"
+        app:layout_constraintTop_toBottomOf="@+id/garden_blueprint_blueprint_table"
         app:srcCompat="@drawable/garden_blueprint_control_grid"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -107,13 +480,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="5dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/StringValueForImageButton"
         android:rotation="-90"
-        app:layout_constraintEnd_toEndOf="@+id/garden_blueprint_plan"
-        app:layout_constraintStart_toStartOf="@+id/garden_blueprint_plan"
-        app:layout_constraintTop_toBottomOf="@+id/garden_blueprint_plan"
+        app:layout_constraintEnd_toEndOf="@+id/garden_blueprint_blueprint_table"
+        app:layout_constraintStart_toStartOf="@+id/garden_blueprint_blueprint_table"
+        app:layout_constraintTop_toBottomOf="@+id/garden_blueprint_blueprint_table"
         app:srcCompat="@drawable/garden_blueprint_control_grid"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -121,355 +493,16 @@
         android:id="@+id/garden_blueprint_grid_increase_column"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
         android:layout_marginBottom="40dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/StringValueForImageButton"
         android:rotation="180"
-        app:layout_constraintBottom_toBottomOf="@+id/garden_blueprint_plan"
-        app:layout_constraintStart_toEndOf="@+id/garden_blueprint_plan"
-        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_plan"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_blueprint_blueprint_table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/garden_blueprint_blueprint_table"
+        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_blueprint_table"
         app:srcCompat="@drawable/garden_blueprint_control_grid"
         tools:ignore="TouchTargetSizeCheck" />
-
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/garden_blueprint_plan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:padding="6dp"
-        app:columnCount="6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/garden_blueprint_progress_next">
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:layout_column="0"
-            app:layout_row="0"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect27"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect28"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect29"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect32"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect34"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect35"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/garden_blueprint_grid_rect36"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/StringValueForImageView"
-            android:padding="6dp"
-            app:srcCompat="@drawable/garden_blueprint_plan_rect"
-            tools:ignore="ImageContrastCheck" />
-
-    </androidx.gridlayout.widget.GridLayout>
 
     <LinearLayout
         android:id="@+id/garden_blueprint_drag_plants"

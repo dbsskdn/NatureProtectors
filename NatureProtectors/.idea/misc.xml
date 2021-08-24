@@ -3,12 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../../layout/custom_preview.xml" value="0.5552083333333333" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.5588541666666667" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.5588541666666667" />
         <entry key="app/src/main/res/drawable/plants_selection_checkbox.xml" value="0.43385416666666665" />
         <entry key="app/src/main/res/font/fonts.xml" value="0.5744791666666667" />
         <entry key="app/src/main/res/layout/ActivitiyMainBinding.xml" value="0.5359375" />
-        <entry key="app/src/main/res/layout/activity_garden_blueprint.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/activity_garden_blueprint.xml" value="0.715079916608756" />
         <entry key="app/src/main/res/layout/activity_garden_info.xml" value="0.5192708333333333" />
         <entry key="app/src/main/res/layout/activity_garden_registration.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_grow_guideline.xml" value="0.5359375" />
