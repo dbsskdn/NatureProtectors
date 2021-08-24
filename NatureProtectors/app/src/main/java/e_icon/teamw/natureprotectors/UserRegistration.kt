@@ -61,7 +61,7 @@ class UserRegistration : AppCompatActivity() {
 
         binding.userRegistrationRegistrationButton.setOnClickListener{
             userName = binding.userRegistrationUsernameInput.text.toString()
-            val userNameFilled = userName != "Username"
+            val userNameFilled = userName != ""
 
             if(userNameFilled && userCountrySelected){
                 isRegistered = true

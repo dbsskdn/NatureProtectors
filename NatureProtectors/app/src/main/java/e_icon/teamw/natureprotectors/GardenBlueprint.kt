@@ -6,12 +6,17 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.recyclerview.widget.GridLayoutManager
+import e_icon.teamw.natureprotectors.data.Datasource
+import e_icon.teamw.natureprotectors.adapter.ItemAdapter
 import e_icon.teamw.natureprotectors.databinding.ActivityGardenBlueprintBinding
 
 private lateinit var binding: ActivityGardenBlueprintBinding
 var guidelinePlant = ""
-var blueprintTableRow = 6
-var blueprintTableColumn = 6
+private var numOfItems = 36
+private var numRows = 6
+private var numCols = 6
+private var spanCount = 6
 
 class GardenBlueprint : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,43 +39,51 @@ class GardenBlueprint : AppCompatActivity() {
             startActivity(plantsSelectionIntent)
         }
 
-        binding.gardenBlueprintGridIncreaseRow.setOnClickListener {
-            if (blueprintTableRow == 6){
-                Toast.makeText(applicationContext, "The row can be added up to 6!", Toast.LENGTH_LONG).show()
+        updateTable()
+
+        binding.gardenBlueprintGridDeclineRow.setOnClickListener {
+            if(numRows > 1){
+                numRows--
+                numOfItems -= numCols
+                updateTable()
             }
             else {
-                blueprintTableRow += 1
-                controlTableRow()
+                Toast.makeText(applicationContext, "The row can deleted up to 1!", Toast.LENGTH_LONG).show()
             }
         }
 
-        binding.gardenBlueprintGridDeclineRow.setOnClickListener {
-            if (blueprintTableRow == 1){
-                Toast.makeText(applicationContext, "The row can be removed up to 1!", Toast.LENGTH_LONG).show()
+        binding.gardenBlueprintGridIncreaseRow.setOnClickListener {
+            if(numRows < 6) {
+                numRows++
+                numOfItems += numCols
+                updateTable()
             }
             else {
-                blueprintTableRow -= 1
-                controlTableRow()
+                Toast.makeText(applicationContext, "The row can added up to 6!", Toast.LENGTH_LONG).show()
             }
         }
 
         binding.gardenBlueprintGridIncreaseColumn.setOnClickListener {
-            if (blueprintTableColumn == 6){
-                Toast.makeText(applicationContext, "The column can be added up to 6!", Toast.LENGTH_LONG).show()
+            if(numCols < 6 && spanCount < 6){
+                numCols++
+                numOfItems += numRows
+                spanCount++
+                updateTable()
             }
             else {
-                blueprintTableColumn += 1
-                controlTableColumn()
+                Toast.makeText(applicationContext, "The column can added up to 6!", Toast.LENGTH_LONG).show()
             }
         }
 
         binding.gardenBlueprintGridDeclineColumn.setOnClickListener {
-            if (blueprintTableColumn == 1){
-                Toast.makeText(applicationContext, "The column can be removed up to 1!", Toast.LENGTH_LONG).show()
+            if(numCols > 1 && spanCount > 1){
+                numCols--
+                numOfItems -= numRows
+                spanCount--
+                updateTable()
             }
             else {
-                blueprintTableColumn -= 1
-                controlTableColumn()
+                Toast.makeText(applicationContext, "The column can deleted up to 1!", Toast.LENGTH_LONG).show()
             }
         }
 
@@ -98,6 +111,11 @@ class GardenBlueprint : AppCompatActivity() {
             guidelinePlant = "sunflower"
             goToGuideline()
         }
+
+        binding.gardenBlueprintProgressNext.setOnClickListener {
+            val gardenInfoIntent = Intent(this, GardenInfo::class.java)
+            startActivity(gardenInfoIntent)
+        }
     }
 
     private fun goToGuideline(): Boolean {
@@ -106,74 +124,14 @@ class GardenBlueprint : AppCompatActivity() {
         return false
     }
 
-    private fun controlTableRow() {
-        binding.gardenBlueprintBlueprintTableRow1.visibility = View.GONE
-        binding.gardenBlueprintBlueprintTableRow2.visibility = View.GONE
-        binding.gardenBlueprintBlueprintTableRow3.visibility = View.GONE
-        binding.gardenBlueprintBlueprintTableRow4.visibility = View.GONE
-        binding.gardenBlueprintBlueprintTableRow5.visibility = View.GONE
-        binding.gardenBlueprintBlueprintTableRow6.visibility = View.GONE
+    private fun updateTable() {
+        val myDataset = Datasource().loadAffirmations(numOfItems) // Initialize data
 
-        when (blueprintTableRow){
-            1 -> binding.gardenBlueprintBlueprintTableRow6.visibility = View.VISIBLE
-            2 -> {
-                binding.gardenBlueprintBlueprintTableRow1.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow2.visibility = View.VISIBLE
-            }
-            3 -> {
-                binding.gardenBlueprintBlueprintTableRow1.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow2.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow3.visibility = View.VISIBLE
-            }
-            4 -> {
-                binding.gardenBlueprintBlueprintTableRow1.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow2.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow3.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow4.visibility = View.VISIBLE
-            }
-            5 -> {
-                binding.gardenBlueprintBlueprintTableRow1.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow2.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow3.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow4.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow5.visibility = View.VISIBLE
-            }
-            6 -> {
-                binding.gardenBlueprintBlueprintTableRow1.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow2.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow3.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow4.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow5.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow6.visibility = View.VISIBLE
-            }
-        }
-    }
-
-    private fun controlTableColumn() {
-        binding.gardenBlueprintBlueprintTableRow1.visibility = View.GONE
-        binding.gardenBlueprintBlueprintTableRow2.visibility = View.GONE
-        binding.gardenBlueprintBlueprintTableRow3.visibility = View.GONE
-        binding.gardenBlueprintBlueprintTableRow4.visibility = View.GONE
-        binding.gardenBlueprintBlueprintTableRow5.visibility = View.GONE
-        binding.gardenBlueprintBlueprintTableRow6.visibility = View.GONE
-
-        when (blueprintTableColumn) {
-            6 -> {
-                binding.gardenBlueprintBlueprintTableRow1.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow2.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow3.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow4.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow5.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow6.visibility = View.VISIBLE
-            }
-            5 -> {
-                binding.gardenBlueprintBlueprintTableRow1.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow2.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow3.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow4.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTableRow5.visibility = View.VISIBLE
-                binding.gardenBlueprintBlueprintTable.setColumnShrinkable(5, true)
-            }
-        }
+        val recyclerView = binding.recyclerView
+        recyclerView.isNestedScrollingEnabled = false
+        recyclerView.overScrollMode = View.OVER_SCROLL_NEVER
+        recyclerView.adapter = ItemAdapter(this, myDataset)
+        (recyclerView.layoutManager as GridLayoutManager).spanCount = spanCount
+        recyclerView.adapter = ItemAdapter(this, myDataset)
     }
 }

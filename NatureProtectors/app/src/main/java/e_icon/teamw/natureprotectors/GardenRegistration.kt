@@ -16,7 +16,8 @@ class GardenRegistration : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.gardenRegistrationProgressNext.setOnClickListener {
-            val gardenNameFilled = gardenName != "Garden Name"
+            gardenName = binding.gardenRegistrationGardenNameEdittext.text.toString()
+            val gardenNameFilled = gardenName != ""
 
             if (gardenNameFilled) {
                 gardenName = binding.gardenRegistrationGardenNameEdittext.text.toString()

@@ -39,7 +39,7 @@
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="@string/username"
+        android:hint="@string/username"
         app:layout_constraintBottom_toBottomOf="@+id/user_registration_username_inputfield"
         app:layout_constraintStart_toStartOf="@+id/user_registration_username_inputfield"
         app:layout_constraintTop_toTopOf="@+id/user_registration_username_inputfield" />

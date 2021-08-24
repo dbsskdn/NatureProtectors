@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard">
+
+    <TextView
+        android:id="@+id/dashboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/dashboard_title"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/dashboard_add_garden_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/StringValueForImageButton"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dashboard_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dashboard_title"
+        app:srcCompat="@drawable/dashboard_add_garden_btn"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_add_garden_btn">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dashboard_garden"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/dashboard_garden_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/StringValueForImageButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/dashboard_garden_bg" />
+
+            <TextView
+                android:id="@+id/dashboard_garden_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/sample"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/dashboard_garden_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/dashboard_garden_bg" />
+
+            <TextView
+                android:id="@+id/dashboard_garden_has"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/sample"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/dashboard_garden_name"
+                app:layout_constraintTop_toTopOf="@+id/dashboard_garden_bg" />
+
+            <LinearLayout
+                android:id="@+id/dashboard_garden_has_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/dashboard_gardening_time"
+                app:layout_constraintStart_toEndOf="@+id/dashboard_garden_has"
+                app:layout_constraintTop_toTopOf="@+id/dashboard_garden_has">
+
+                <ImageView
+                    android:id="@+id/dashboard_garden_has_tomato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/StringValueForImageView"
+                    app:srcCompat="@drawable/dashboard_garden_plants_tomato" />
+
+                <ImageView
+                    android:id="@+id/dashboard_garden_has_potato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/StringValueForImageView"
+                    app:srcCompat="@drawable/dashboard_garden_plants_potato" />
+
+                <ImageView
+                    android:id="@+id/dashboard_garden_has_lettuce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/StringValueForImageView"
+                    app:srcCompat="@drawable/dashboard_garden_plants_lettuce" />
+
+                <ImageView
+                    android:id="@+id/dashboard_garden_has_cherry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/StringValueForImageView"
+                    app:srcCompat="@drawable/dashboard_garden_plants_cherry" />
+
+                <ImageView
+                    android:id="@+id/dashboard_garden_has_sunflower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/StringValueForImageView"
+                    app:srcCompat="@drawable/dashboard_garden_plants_sunflower" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dashboard_garden_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/sample"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/dashboard_garden_bg"
+                app:layout_constraintStart_toEndOf="@+id/dashboard_garden_name" />
+
+            <TextView
+                android:id="@+id/dashboard_gardening_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/sample"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/dashboard_garden_bg"
+                app:layout_constraintStart_toEndOf="@+id/dashboard_garden_time" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

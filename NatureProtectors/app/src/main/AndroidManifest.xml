@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NatureProtectors">
         <activity
+            android:name=".Gallery"
+            android:exported="true" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="true" />
+        <activity
             android:name=".GrowGuideline"
             android:exported="true" />
         <activity

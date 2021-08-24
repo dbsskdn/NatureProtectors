@@ -17,5 +17,8 @@
     <string name="plantsSelectionSunflower">Sunflower</string>
     <string name="plantsSelectionSmartySays">Select plants what you want to plant in your garden</string>
     <string name="title_activity_garden_blueprint">GardenBlueprint</string>
-
+    <string name="garden_info_garden_plants">Garden Plants</string>
+    <string name="garden_info_garden_gallery">Garden Gallery</string>
+    <string name="dashboard_title">Your Gardens</string>
+    <string name="sample">sample</string>
 </resources>

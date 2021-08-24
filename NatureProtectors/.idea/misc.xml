@@ -9,13 +9,15 @@
         <entry key="app/src/main/res/drawable/plants_selection_checkbox.xml" value="0.43385416666666665" />
         <entry key="app/src/main/res/font/fonts.xml" value="0.5744791666666667" />
         <entry key="app/src/main/res/layout/ActivitiyMainBinding.xml" value="0.5359375" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/activity_gallery.xml" value="0.5192708333333333" />
         <entry key="app/src/main/res/layout/activity_garden_blueprint.xml" value="0.715079916608756" />
         <entry key="app/src/main/res/layout/activity_garden_info.xml" value="0.5192708333333333" />
         <entry key="app/src/main/res/layout/activity_garden_registration.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_grow_guideline.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/activity_license.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.55" />
-        <entry key="app/src/main/res/layout/activity_plants_selection.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/activity_plants_selection.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_start.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/activity_user_registration.xml" value="0.625" />
         <entry key="app/src/main/res/layout/activity_user_registration2.xml" value="0.5359375" />
@@ -23,6 +25,7 @@
         <entry key="app/src/main/res/layout/country_dropdown_items.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_blueprint_drag_plants.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_blueprint_grid_item.xml" value="0.5359375" />
+        <entry key="app/src/main/res/layout/garden_blueprint_table_item.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/license.xml" value="0.45" />
         <entry key="app/src/main/res/layout/start.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/user_registration.xml" value="0.5055555555555555" />

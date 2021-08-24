@@ -27,7 +27,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="@string/gardenName"
+        android:hint="@string/gardenName"
         app:layout_constraintBottom_toBottomOf="@+id/garden_registration_garden_name_inputfield"
         app:layout_constraintStart_toStartOf="@+id/garden_registration_garden_name_inputfield"
         app:layout_constraintTop_toTopOf="@+id/garden_registration_garden_name_inputfield"
