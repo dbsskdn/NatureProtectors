@@ -33,7 +33,7 @@
             android:contentDescription="@string/StringValueForImageButton"
             android:minHeight="24dp"
             app:srcCompat="@drawable/garden_blueprint_add_item_tomato"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
         <ImageButton
             android:id="@+id/imageButton2"

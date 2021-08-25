@@ -283,7 +283,7 @@ class GoogleMapView : Fragment(), OnMapReadyCallback, GoogleMap.OnMapLongClickLi
         savedInstanceState: Bundle?
     ): View {
         val rootView = inflater.inflate(R.layout.garden_registration_map, container, false)
-        mView = rootView.findViewById(R.id.garden_registration_map)
+        mView = rootView.findViewById(R.id.garden_registration_map_view)
         mView.onCreate(savedInstanceState)
         mView.getMapAsync(this)
         return rootView

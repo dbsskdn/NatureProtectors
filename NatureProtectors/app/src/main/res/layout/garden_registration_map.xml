@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <com.google.android.gms.maps.MapView
-        android:id="@+id/garden_registration_map"
+        android:id="@+id/garden_registration_map_view"
         android:layout_width="320dp"
         android:layout_height="400dp"
         app:layout_constraintStart_toStartOf="parent"
