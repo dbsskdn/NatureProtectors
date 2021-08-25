@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/garden_blueprint_add_item_bg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/StringValueForImageView"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="2dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/garden_blueprint_add_item_bg"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton

@@ -25,13 +25,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:ems="10"
+        android:hint="@string/gardenName"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:hint="@string/gardenName"
         app:layout_constraintBottom_toBottomOf="@+id/garden_registration_garden_name_inputfield"
         app:layout_constraintStart_toStartOf="@+id/garden_registration_garden_name_inputfield"
         app:layout_constraintTop_toTopOf="@+id/garden_registration_garden_name_inputfield"
-        android:importantForAutofill="no" />
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/garden_registration_smarty_char"
@@ -40,7 +41,7 @@
         android:layout_marginBottom="30dp"
         android:contentDescription="@string/StringValueForImageView"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/garden_registration_garden_location"
+        app:layout_constraintStart_toStartOf="@+id/google_map_fragment"
         app:srcCompat="@drawable/garden_registration_smarty_char"
         tools:ignore="ImageContrastCheck" />
 
@@ -51,23 +52,9 @@
         android:layout_marginBottom="30dp"
         android:contentDescription="@string/StringValueForImageView"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/garden_registration_garden_location"
+        app:layout_constraintEnd_toEndOf="@+id/google_map_fragment"
         app:srcCompat="@drawable/garden_registration_smarty_says_background"
         tools:ignore="ImageContrastCheck" />
-
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/garden_registration_garden_location"
-        android:layout_width="320dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
-        android:contentDescription="@string/StringValueForMapView"
-        app:layout_constraintBottom_toTopOf="@+id/garden_registration_smarty_says_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/garden_registration_garden_name_inputfield"
-        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/garden_registration_smarty_says_text"
@@ -107,5 +94,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/google_map_fragment"
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toTopOf="@+id/garden_registration_smarty_says_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/garden_registration_garden_name_inputfield">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

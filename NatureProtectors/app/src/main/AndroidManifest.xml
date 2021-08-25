@@ -32,10 +32,6 @@
             android:name=".PlantsSelection"
             android:exported="true" />
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDEPEv8t1a-77e2q2cC5eql5UMCE1pXyGY" />
-
         <activity
             android:name=".GardenRegistration"
             android:exported="true" />
@@ -54,6 +50,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDEPEv8t1a-77e2q2cC5eql5UMCE1pXyGY" />
     </application>
 
 </manifest>

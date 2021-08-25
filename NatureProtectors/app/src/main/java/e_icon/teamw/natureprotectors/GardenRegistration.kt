@@ -4,7 +4,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.google.android.gms.maps.SupportMapFragment
 import e_icon.teamw.natureprotectors.databinding.ActivityGardenRegistrationBinding
+import com.google.android.gms.maps.CameraUpdateFactory
+
+import com.google.android.gms.maps.model.MarkerOptions
+
+import com.google.android.gms.maps.model.LatLng
+
+import com.google.android.gms.maps.GoogleMap.OnMapClickListener
+
+
+
 
 private lateinit var binding: ActivityGardenRegistrationBinding
 var gardenName = ""
@@ -28,5 +39,9 @@ class GardenRegistration : AppCompatActivity() {
                 Toast.makeText(applicationContext, "You did not write your garden name!", Toast.LENGTH_LONG).show()
             }
         }
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.google_map_fragment, GoogleMapView())
+            .commit()
     }
 }

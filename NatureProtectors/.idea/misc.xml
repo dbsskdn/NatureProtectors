@@ -27,6 +27,7 @@
         <entry key="app/src/main/res/layout/garden_blueprint_drag_plants.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_blueprint_grid_item.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_blueprint_table_item.xml" value="0.5359375" />
+        <entry key="app/src/main/res/layout/garden_registration_map.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/license.xml" value="0.45" />
         <entry key="app/src/main/res/layout/start.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/user_registration.xml" value="0.5055555555555555" />
@@ -47,7 +48,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.5359375" />
+        <option name="scale" value="1.5" />
       </ProjectState>
     </option>
   </component>
