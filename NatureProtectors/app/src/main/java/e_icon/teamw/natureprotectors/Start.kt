@@ -14,9 +14,8 @@ class Start : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.startStartButton.setOnClickListener {
-                val userRegistrationIntent = Intent(this, UserRegistration::class.java)
-                startActivity(userRegistrationIntent)
-
+            val userRegistrationIntent = Intent(this, UserRegistration::class.java)
+            startActivity(userRegistrationIntent)
         }
 
         binding.startLicenseButton.setOnClickListener {
