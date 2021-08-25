@@ -3,6 +3,7 @@
     package="e_icon.teamw.natureprotectors">
 
     <application
+        android:name="e_icon.teamw.natureprotectors.Prefs"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/app_icon"

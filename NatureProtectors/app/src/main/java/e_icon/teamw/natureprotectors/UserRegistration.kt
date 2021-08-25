@@ -14,7 +14,6 @@ import e_icon.teamw.natureprotectors.databinding.CountryDropdownItemsBinding
 
 private lateinit var binding: ActivityUserRegistrationBinding
 private lateinit var countryDropdownBinding: CountryDropdownItemsBinding
-var isRegistered= false
 var userCountry = ""
 var userName = ""
 
@@ -25,6 +24,9 @@ class UserRegistration : AppCompatActivity() {
         countryDropdownBinding = CountryDropdownItemsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        if (Prefs.userInfo.getBool("isRegistered", true)){
+            //if garden registered
+        }
         val countryDropdownItems = resources.getStringArray(R.array.countryDropdown)
         val countryDropdownAdapter = object : ArrayAdapter<String>(this, R.layout.country_dropdown_items){
             override fun getView(position : Int, convertView: View?, parent: ViewGroup): View {
@@ -62,9 +64,10 @@ class UserRegistration : AppCompatActivity() {
         binding.userRegistrationRegistrationButton.setOnClickListener{
             userName = binding.userRegistrationUsernameInput.text.toString()
             val userNameFilled = userName != ""
-
             if(userNameFilled && userCountrySelected){
-                isRegistered = true
+                Prefs.userInfo.setString("userName", userName)
+                Prefs.userInfo.setString("userCountry", userCountry)
+                Prefs.userInfo.setBool("isRegistered", true)
                 val gardenRegistrationIntent = Intent(this, GardenRegistration::class.java)
                 startActivity(gardenRegistrationIntent)
             }
