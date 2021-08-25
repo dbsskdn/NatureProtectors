@@ -87,27 +87,27 @@ class GardenBlueprint : AppCompatActivity() {
             }
         }
 
-        binding.gardenBlueprintDragPlantsTomato.setOnLongClickListener {
+        binding.gardenBlueprintDragPlantsTomato.setOnClickListener {
             guidelinePlant = "tomato"
             goToGuideline()
         }
 
-        binding.gardenBlueprintDragPlantsPotato.setOnLongClickListener {
+        binding.gardenBlueprintDragPlantsPotato.setOnClickListener {
             guidelinePlant = "potato"
             goToGuideline()
         }
 
-        binding.gardenBlueprintDragPlantsLettuce.setOnLongClickListener {
+        binding.gardenBlueprintDragPlantsLettuce.setOnClickListener {
             guidelinePlant = "lettuce"
             goToGuideline()
         }
 
-        binding.gardenBlueprintDragPlantsCherry.setOnLongClickListener {
+        binding.gardenBlueprintDragPlantsCherry.setOnClickListener {
             guidelinePlant = "cherry"
             goToGuideline()
         }
 
-        binding.gardenBlueprintDragPlantsSunflower.setOnLongClickListener {
+        binding.gardenBlueprintDragPlantsSunflower.setOnClickListener {
             guidelinePlant = "sunflower"
             goToGuideline()
         }

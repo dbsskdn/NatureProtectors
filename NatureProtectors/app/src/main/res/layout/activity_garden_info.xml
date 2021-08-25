@@ -11,13 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/StringValueForImageView"
-        app:layout_constraintBottom_toBottomOf="@+id/plants_selection_smarty_char2"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_info_smarty_char"
         app:layout_constraintEnd_toEndOf="@+id/garden_info_blueprint_btn"
         app:srcCompat="@drawable/garden_registration_smarty_says_background"
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/plants_selection_smarty_char2"
+        android:id="@+id/garden_info_smarty_char"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
@@ -143,6 +143,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:contentDescription="@string/StringValueForImageView"
+            android:visibility="invisible"
             app:srcCompat="@drawable/garden_info_garden_plants_tomato" />
 
         <ImageView
@@ -153,6 +154,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:contentDescription="@string/StringValueForImageView"
+            android:visibility="invisible"
             app:srcCompat="@drawable/garden_info_garden_plants_potato" />
 
         <ImageView
@@ -163,6 +165,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:contentDescription="@string/StringValueForImageView"
+            android:visibility="invisible"
             app:srcCompat="@drawable/garden_info_garden_plants_lettuce" />
 
         <ImageView
@@ -173,6 +176,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:contentDescription="@string/StringValueForImageView"
+            android:visibility="invisible"
             app:srcCompat="@drawable/garden_info_garden_plants_cherry" />
 
         <ImageView
@@ -183,6 +187,7 @@
             android:layout_marginEnd="13dp"
             android:layout_weight="1"
             android:contentDescription="@string/StringValueForImageView"
+            android:visibility="invisible"
             app:srcCompat="@drawable/garden_info_garden_plants_sunflower" />
 
     </LinearLayout>
@@ -270,7 +275,7 @@
         tools:ignore="DuplicateSpeakableTextCheck,MissingConstraints" />
 
     <TextView
-        android:id="@+id/plants_selection_smarty_says_text2"
+        android:id="@+id/garden_info_smarty_says_txt"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginEnd="8dp"

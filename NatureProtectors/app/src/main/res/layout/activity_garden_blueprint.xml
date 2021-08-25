@@ -220,4 +220,15 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/garden_blueprint_smarty_says"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/StringValueForImageView"
+        app:layout_constraintBottom_toTopOf="@+id/garden_blueprint_drag_plants_bg"
+        app:layout_constraintEnd_toEndOf="@+id/garden_blueprint_drag_plants_bg"
+        app:layout_constraintStart_toStartOf="@+id/garden_blueprint_drag_plants_bg"
+        app:srcCompat="@drawable/garden_blueprint_smarty_says" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
