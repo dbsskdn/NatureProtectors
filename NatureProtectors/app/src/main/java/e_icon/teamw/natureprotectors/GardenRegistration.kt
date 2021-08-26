@@ -1,5 +1,6 @@
 package e_icon.teamw.natureprotectors
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,10 +11,13 @@ private lateinit var binding: ActivityGardenRegistrationBinding
 var gardenName = ""
 
 class GardenRegistration : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityGardenRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.gardenRegistrationSmartySaysText.text = "Write your garden name and long-click to choose garden location"
 
         binding.gardenRegistrationProgressNext.setOnClickListener {
             gardenName = binding.gardenRegistrationGardenNameEdittext.text.toString()
@@ -21,6 +25,7 @@ class GardenRegistration : AppCompatActivity() {
 
             if (gardenNameFilled) {
                 gardenName = binding.gardenRegistrationGardenNameEdittext.text.toString()
+                Prefs.infos.gardenInfoSetString("gardenName", gardenName)
                 val plantsSelectionIntent = Intent(this, PlantsSelection::class.java)
                 startActivity(plantsSelectionIntent)
             }

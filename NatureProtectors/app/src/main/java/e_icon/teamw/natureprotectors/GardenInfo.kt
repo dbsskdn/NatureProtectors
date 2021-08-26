@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.view.isVisible
+import android.view.View
 import e_icon.teamw.natureprotectors.databinding.ActivityGardenInfoBinding
 
 class GardenInfo : AppCompatActivity() {
@@ -16,16 +16,27 @@ class GardenInfo : AppCompatActivity() {
         binding = ActivityGardenInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.gardenInfoGardenName.text = gardenName
+        binding.gardenInfoGardenName.text = Prefs.infos.gardenInfoGetString("gardenName", "Nothing")
 
-        gardenPlants.forEach {
-            when (it) {
-                "tomato" -> binding.gardenInfoGardenPlantsTomato.isVisible = true
-                "potato" -> binding.gardenInfoGardenPlantsPotato.isVisible = true
-                "lettuce" -> binding.gardenInfoGardenPlantsLettuce.isVisible = true
-                "cherry" -> binding.gardenInfoGardenPlantsCherry.isVisible = true
-                "sunflower" -> binding.gardenInfoGardenPlantsSunflower.isVisible = true
-            }
+        if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("tomato") == true){
+            binding.gardenInfoGardenTomato.visibility = View.VISIBLE
+        }
+        if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("potato") == true){
+            binding.gardenInfoGardenPotato.visibility = View.VISIBLE
+        }
+        if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("lettuce") == true){
+            binding.gardenInfoGardenLettuce.visibility = View.VISIBLE
+        }
+        if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("cherry") == true){
+            binding.gardenInfoGardenCherry.visibility = View.VISIBLE
+        }
+        if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("sunflower") == true){
+            binding.gardenInfoGardenSunflower.visibility = View.VISIBLE
+        }
+
+        binding.gardenInfoCameraBtn.setOnClickListener {
+            val pictureIntent = Intent(this, Picture::class.java)
+            startActivity(pictureIntent)
         }
 
         binding.gardenInfoBlueprintBtn.setOnClickListener {
@@ -33,7 +44,6 @@ class GardenInfo : AppCompatActivity() {
             startActivity(gardenBlueprintIntent)
         }
 
-
-        binding.gardenInfoSmartySaysTxt.text = "This is your garden information screen. You can view location of your garden, plants in your garden, gallery pictures of your garden. You can also go to you garden blueprint."
+        binding.gardenInfoSmartySaysTxt.text = "This is your garden information screen. You can picture your garden, goto gallery or blueprint of your garden."
     }
 }

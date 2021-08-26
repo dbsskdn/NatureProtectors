@@ -14,8 +14,20 @@ class Start : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.startStartButton.setOnClickListener {
-            val userRegistrationIntent = Intent(this, UserRegistration::class.java)
-            startActivity(userRegistrationIntent)
+            when {
+                Prefs.infos.registerGetBool("isRegistered", false) -> {
+                    val gardenInfoIntent = Intent(this, GardenInfo::class.java)
+                    startActivity(gardenInfoIntent)
+                }
+                Prefs.infos.gardenRegisterGetBool("isGardenRegistered", false) -> {
+                    val gardenRegistrationIntent = Intent(this, GardenRegistration::class.java)
+                    startActivity(gardenRegistrationIntent)
+                }
+                else -> {
+                    val userRegistrationIntent = Intent(this, UserRegistration::class.java)
+                    startActivity(userRegistrationIntent)
+                }
+            }
         }
 
         binding.startLicenseButton.setOnClickListener {

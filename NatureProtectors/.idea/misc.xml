@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/ActivitiyMainBinding.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.75" />
         <entry key="app/src/main/res/layout/activity_gallery.xml" value="0.5192708333333333" />
+        <entry key="app/src/main/res/layout/activity_gallery_specific.xml" value="0.5192708333333333" />
         <entry key="app/src/main/res/layout/activity_garden_blueprint.xml" value="0.715079916608756" />
         <entry key="app/src/main/res/layout/activity_garden_info.xml" value="0.5192708333333333" />
         <entry key="app/src/main/res/layout/activity_garden_registration.xml" value="0.5" />
@@ -27,6 +28,7 @@
         <entry key="app/src/main/res/layout/garden_blueprint_drag_plants.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_blueprint_grid_item.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_blueprint_table_item.xml" value="0.5359375" />
+        <entry key="app/src/main/res/layout/garden_info_map.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_registration_map.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/license.xml" value="0.45" />
         <entry key="app/src/main/res/layout/start.xml" value="0.5359375" />

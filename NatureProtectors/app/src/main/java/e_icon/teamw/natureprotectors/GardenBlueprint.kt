@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import e_icon.teamw.natureprotectors.data.Datasource
 import e_icon.teamw.natureprotectors.adapter.ItemAdapter
@@ -24,19 +23,36 @@ class GardenBlueprint : AppCompatActivity() {
         binding = ActivityGardenBlueprintBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        gardenPlants.forEach {
-            when (it) {
-                "tomato" -> binding.gardenBlueprintDragPlantsTomato.isVisible = true
-                "potato" -> binding.gardenBlueprintDragPlantsPotato.isVisible = true
-                "lettuce" -> binding.gardenBlueprintDragPlantsLettuce.isVisible = true
-                "cherry" -> binding.gardenBlueprintDragPlantsCherry.isVisible = true
-                "sunflower" -> binding.gardenBlueprintDragPlantsSunflower.isVisible = true
-            }
+        if (Prefs.infos.gardenRegisterGetBool("isGardenRegistered", false)) {
+            binding.gardenBlueprintProgressText.text = Prefs.infos.gardenInfoGetString("gardenName", gardenName)
+            binding.gardenBlueprintProgressNext.visibility = View.GONE
+        }
+
+        if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("tomato") == true){
+            binding.gardenBlueprintDragPlantsTomato.visibility = View.VISIBLE
+        }
+        if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("potato") == true){
+            binding.gardenBlueprintDragPlantsPotato.visibility = View.VISIBLE
+        }
+        if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("lettuce") == true){
+            binding.gardenBlueprintDragPlantsLettuce.visibility = View.VISIBLE
+        }
+        if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("cherry") == true){
+            binding.gardenBlueprintDragPlantsCherry.visibility = View.VISIBLE
+        }
+        if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("sunflower") == true){
+            binding.gardenBlueprintDragPlantsSunflower.visibility = View.VISIBLE
         }
 
         binding.gardenBlueprintProgressPrev.setOnClickListener {
-            val plantsSelectionIntent = Intent(this, PlantsSelection::class.java)
-            startActivity(plantsSelectionIntent)
+            if (Prefs.infos.gardenRegisterGetBool("isGardenRegistered", false)) {
+                val gardenInfoIntent = Intent(this, GardenInfo::class.java)
+                startActivity(gardenInfoIntent)
+            }
+            else {
+                val plantsSelectionIntent = Intent(this, PlantsSelection::class.java)
+                startActivity(plantsSelectionIntent)
+            }
         }
 
         updateTable()
@@ -113,6 +129,7 @@ class GardenBlueprint : AppCompatActivity() {
         }
 
         binding.gardenBlueprintProgressNext.setOnClickListener {
+            Prefs.infos.gardenRegisterSetBool("isGardenRegistered", true)
             val gardenInfoIntent = Intent(this, GardenInfo::class.java)
             startActivity(gardenInfoIntent)
         }

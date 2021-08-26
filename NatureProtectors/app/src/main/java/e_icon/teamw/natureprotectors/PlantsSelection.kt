@@ -7,14 +7,13 @@ import android.widget.Toast
 import e_icon.teamw.natureprotectors.databinding.ActivityPlantsSelectionBinding
 
 private lateinit var binding: ActivityPlantsSelectionBinding
-var gardenPlants = mutableListOf<String>()
+var gardenPlants = mutableSetOf<String>()
 
 class PlantsSelection : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPlantsSelectionBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        gardenPlants = mutableListOf()
 
         binding.plantsSelectionProgressPrev.setOnClickListener {
             val gardenRegistrationIntent = Intent(this, GardenRegistration::class.java)
@@ -23,10 +22,12 @@ class PlantsSelection : AppCompatActivity() {
 
         binding.plantsSelectionProgressNext.setOnClickListener {
             plantsSelection()
-            if(gardenPlants.size == 0) {
+
+            if (gardenPlants.size == 0) {
                 Toast.makeText(applicationContext, "You have to select at least one plant!", Toast.LENGTH_LONG).show()
             }
             else {
+                Prefs.infos.gardenPlantsSetStringSet("gardenPlants", gardenPlants)
                 val gardenBlueprintIntent = Intent(this, GardenBlueprint::class.java)
                 startActivity(gardenBlueprintIntent)
             }

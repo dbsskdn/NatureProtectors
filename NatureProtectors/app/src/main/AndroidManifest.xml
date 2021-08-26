@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="e_icon.teamw.natureprotectors">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
     <application
-        android:name="e_icon.teamw.natureprotectors.Prefs"
+        android:name=".Prefs"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/app_icon"
@@ -11,6 +18,10 @@
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NatureProtectors">
+
+        <activity
+            android:name=".GallerySpecific"
+            android:exported="true" />
         <activity
             android:name=".Gallery"
             android:exported="true" />
@@ -28,7 +39,6 @@
         <activity
             android:name=".PlantsSelection"
             android:exported="true" />
-
         <activity
             android:name=".GardenRegistration"
             android:exported="true" />
@@ -51,6 +61,8 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDEPEv8t1a-77e2q2cC5eql5UMCE1pXyGY" />
+
+
     </application>
 
 </manifest>

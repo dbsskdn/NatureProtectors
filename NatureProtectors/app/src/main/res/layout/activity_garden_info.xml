@@ -28,20 +28,6 @@
         tools:ignore="ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/garden_info_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/StringValueForImageButton"
-        android:minWidth="48dp"
-        android:minHeight="56dp"
-        app:layout_constraintStart_toStartOf="@+id/mapView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/progress_prev"
-        tools:ignore="DuplicateSpeakableTextCheck,MissingConstraints" />
-
-    <ImageButton
         android:id="@+id/garden_info_del_garden_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +36,7 @@
         android:contentDescription="@string/StringValueForImageButton"
         android:minWidth="48dp"
         android:minHeight="56dp"
-        app:layout_constraintEnd_toEndOf="@+id/mapView"
+        app:layout_constraintEnd_toEndOf="@+id/garden_info_location"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/garden_info_del_garden_btn"
         tools:ignore="DuplicateSpeakableTextCheck,MissingConstraints" />
@@ -78,10 +64,10 @@
         android:text="@string/sample"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/garden_info_back"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_info_camera_btn"
         app:layout_constraintEnd_toStartOf="@+id/garden_info_camera_btn"
-        app:layout_constraintStart_toEndOf="@+id/garden_info_back"
-        app:layout_constraintTop_toTopOf="@+id/garden_info_back" />
+        app:layout_constraintStart_toStartOf="@+id/garden_info_description_icon"
+        app:layout_constraintTop_toTopOf="@+id/garden_info_camera_btn" />
 
     <ImageView
         android:id="@+id/garden_info_description_icon"
@@ -89,19 +75,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:contentDescription="@string/StringValueForImageView"
-        app:layout_constraintStart_toStartOf="@+id/mapView"
-        app:layout_constraintTop_toBottomOf="@+id/garden_info_back"
+        app:layout_constraintStart_toStartOf="@+id/garden_info_location"
+        app:layout_constraintTop_toBottomOf="@+id/garden_info_camera_btn"
         app:srcCompat="@drawable/garden_info_description" />
-
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/garden_info_description_icon"
-        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/garden_info_gardening_time"
@@ -122,75 +98,8 @@
         android:layout_marginTop="20dp"
         android:contentDescription="@string/StringValueForImageView"
         app:layout_constraintStart_toStartOf="@+id/garden_info_description_icon"
-        app:layout_constraintTop_toBottomOf="@+id/mapView"
+        app:layout_constraintTop_toBottomOf="@+id/garden_info_location"
         app:srcCompat="@drawable/garden_info_garden_plants_bg" />
-
-    <LinearLayout
-        android:layout_width="308dp"
-        android:layout_height="98dp"
-        android:orientation="horizontal"
-        android:paddingTop="28dp"
-        app:layout_constraintBottom_toBottomOf="@+id/garden_info_garden_plants_bg"
-        app:layout_constraintEnd_toEndOf="@+id/garden_info_garden_plants_bg"
-        app:layout_constraintStart_toStartOf="@+id/garden_info_garden_plants_bg"
-        app:layout_constraintTop_toTopOf="@+id/garden_info_garden_plants_bg">
-
-        <ImageView
-            android:id="@+id/garden_info_garden_plants_tomato"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/StringValueForImageView"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/garden_info_garden_plants_tomato" />
-
-        <ImageView
-            android:id="@+id/garden_info_garden_plants_potato"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/StringValueForImageView"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/garden_info_garden_plants_potato" />
-
-        <ImageView
-            android:id="@+id/garden_info_garden_plants_lettuce"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/StringValueForImageView"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/garden_info_garden_plants_lettuce" />
-
-        <ImageView
-            android:id="@+id/garden_info_garden_plants_cherry"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/StringValueForImageView"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/garden_info_garden_plants_cherry" />
-
-        <ImageView
-            android:id="@+id/garden_info_garden_plants_sunflower"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="13dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/StringValueForImageView"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/garden_info_garden_plants_sunflower" />
-
-    </LinearLayout>
 
     <ImageView
         android:id="@+id/garden_info_garden_gallery_bg"
@@ -287,5 +196,89 @@
         app:layout_constraintEnd_toEndOf="@+id/plants_selection_smarty_says_bg2"
         app:layout_constraintStart_toStartOf="@+id/plants_selection_smarty_says_bg2"
         app:layout_constraintTop_toTopOf="@+id/plants_selection_smarty_says_bg2" />
+
+    <FrameLayout
+        android:id="@+id/garden_info_location"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/garden_info_description_icon">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/garden_info_garden_plants"
+        android:layout_width="308dp"
+        android:layout_height="98dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_info_garden_plants_bg"
+        app:layout_constraintEnd_toEndOf="@+id/garden_info_garden_plants_bg"
+        app:layout_constraintStart_toStartOf="@+id/garden_info_garden_plants_bg"
+        app:layout_constraintTop_toTopOf="@+id/garden_info_garden_plants_bg">
+
+        <ImageView
+            android:id="@+id/garden_info_garden_tomato"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/StringValueForImageView"
+            android:visibility="gone"
+            app:srcCompat="@drawable/garden_blueprint_add_item_tomato" />
+
+        <ImageView
+            android:id="@+id/garden_info_garden_potato"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/StringValueForImageView"
+            android:visibility="gone"
+            app:srcCompat="@drawable/garden_blueprint_drag_plants_potato" />
+
+        <ImageView
+            android:id="@+id/garden_info_garden_lettuce"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/StringValueForImageView"
+            android:visibility="gone"
+            app:srcCompat="@drawable/garden_blueprint_drag_plants_lettuce" />
+
+        <ImageView
+            android:id="@+id/garden_info_garden_cherry"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/StringValueForImageView"
+            android:visibility="gone"
+            app:srcCompat="@drawable/garden_blueprint_drag_plants_cherry" />
+
+        <ImageView
+            android:id="@+id/garden_info_garden_sunflower"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/StringValueForImageView"
+            android:visibility="gone"
+            app:srcCompat="@drawable/garden_blueprint_drag_plants_sunflower" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

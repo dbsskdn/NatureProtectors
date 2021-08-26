@@ -24,9 +24,6 @@ class UserRegistration : AppCompatActivity() {
         countryDropdownBinding = CountryDropdownItemsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if (Prefs.userInfo.getBool("isRegistered", true)){
-            //if garden registered
-        }
         val countryDropdownItems = resources.getStringArray(R.array.countryDropdown)
         val countryDropdownAdapter = object : ArrayAdapter<String>(this, R.layout.country_dropdown_items){
             override fun getView(position : Int, convertView: View?, parent: ViewGroup): View {
@@ -42,13 +39,13 @@ class UserRegistration : AppCompatActivity() {
                 return super.getCount() - 1
             }
         }
+        var userCountrySelected = false
 
         countryDropdownAdapter.addAll(countryDropdownItems.toMutableList())
         countryDropdownAdapter.add("Country")
         binding.userRegistrationCountryDropdown.adapter = countryDropdownAdapter
         binding.userRegistrationCountryDropdown.setSelection(countryDropdownAdapter.count)
         binding.userRegistrationCountryDropdown.dropDownVerticalOffset = dipToPixels().toInt()
-        var userCountrySelected = false
 
         binding.userRegistrationCountryDropdown.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -65,9 +62,9 @@ class UserRegistration : AppCompatActivity() {
             userName = binding.userRegistrationUsernameInput.text.toString()
             val userNameFilled = userName != ""
             if(userNameFilled && userCountrySelected){
-                Prefs.userInfo.setString("userName", userName)
-                Prefs.userInfo.setString("userCountry", userCountry)
-                Prefs.userInfo.setBool("isRegistered", true)
+                Prefs.infos.userInfoSetString("userName", userName)
+                Prefs.infos.userInfoSetString("userCountry", userCountry)
+                Prefs.infos.registerSetBool("isRegistered", true)
                 val gardenRegistrationIntent = Intent(this, GardenRegistration::class.java)
                 startActivity(gardenRegistrationIntent)
             }

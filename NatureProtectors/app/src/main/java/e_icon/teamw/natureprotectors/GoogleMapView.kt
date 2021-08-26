@@ -13,6 +13,8 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
+lateinit var gardenLocation: LatLng
+
 class GoogleMapView : Fragment(), OnMapReadyCallback, GoogleMap.OnMapLongClickListener {
 
     private lateinit var mContext: Context
@@ -61,7 +63,7 @@ class GoogleMapView : Fragment(), OnMapReadyCallback, GoogleMap.OnMapLongClickLi
             put("Central African Republic", LatLng(6.611111, 20.939444))
             put("Congo [Republic]", LatLng(-0.228021, 15.827659))
             put("Switzerland", LatLng(46.818188, 8.227512))
-            put("Côte d'Ivoire", LatLng(7.539989, -5.54708))
+            put("Côte d Ivoire", LatLng(7.539989, -5.54708))
             put("Cook Islands", LatLng(-21.236736, -159.777671))
             put("Chile", LatLng(-35.675147, -71.542969))
             put("Cameroon", LatLng(7.369722, 12.354722))
@@ -290,7 +292,9 @@ class GoogleMapView : Fragment(), OnMapReadyCallback, GoogleMap.OnMapLongClickLi
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(countryLatLngList.get(userCountry)))
+        if (countryLatLngList[userCountry] != null) {
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(countryLatLngList[userCountry]))
+        }
         googleMap.moveCamera(CameraUpdateFactory.zoomTo(5f))
         map = googleMap
         map.setOnMapLongClickListener(this)
@@ -323,6 +327,7 @@ class GoogleMapView : Fragment(), OnMapReadyCallback, GoogleMap.OnMapLongClickLi
     override fun onMapLongClick(point: LatLng) {
         val markerOptions = MarkerOptions()
         markerOptions.position(point)
+        gardenLocation = point
         map.clear()
         map.animateCamera(CameraUpdateFactory.newLatLng(point))
         map.addMarker(markerOptions)
