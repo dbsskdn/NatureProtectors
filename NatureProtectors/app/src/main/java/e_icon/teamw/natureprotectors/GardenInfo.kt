@@ -18,14 +18,6 @@ class GardenInfo : AppCompatActivity() {
 
         binding.gardenInfoGardenName.text = gardenName
 
-        binding.gardenInfoBack.setOnClickListener {
-            val dashboardIntent = Intent(this, Dashboard::class.java)
-            startActivity(dashboardIntent)
-        }
-
-
-
-
         gardenPlants.forEach {
             when (it) {
                 "tomato" -> binding.gardenInfoGardenPlantsTomato.isVisible = true

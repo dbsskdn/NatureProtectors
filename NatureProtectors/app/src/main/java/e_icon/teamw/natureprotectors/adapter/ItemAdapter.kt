@@ -13,10 +13,6 @@ class ItemAdapter(private val context: Context,
                   private val dataset: List<GardenBlueprintTable>
                   ): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder.
-    // Each data item is just an Affirmation object.
     class ItemViewHolder(view: View): RecyclerView.ViewHolder(view){
         val imageView: ImageView = view.findViewById(R.id.item_image)
     }
