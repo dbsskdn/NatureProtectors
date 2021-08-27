@@ -45,5 +45,11 @@ class GardenInfo : AppCompatActivity() {
         }
 
         binding.gardenInfoSmartySaysTxt.text = "This is your garden information screen. You can picture your garden, goto gallery or blueprint of your garden."
+        binding.gardenInfoGardeningTime.text = "Garden started : $gardenDate"
+
+        isInGardenInfo = true
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.garden_info_location, GoogleMapView())
+            .commit()
     }
 }

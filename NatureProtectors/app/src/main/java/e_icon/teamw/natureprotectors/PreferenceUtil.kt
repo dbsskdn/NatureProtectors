@@ -9,6 +9,7 @@ class PreferenceUtil (context: Context) {
     private val gardenInfo: SharedPreferences = context.getSharedPreferences("gardenInfo", Context.MODE_PRIVATE)
     private val gardenPlants: SharedPreferences = context.getSharedPreferences("gardenPlants", Context.MODE_PRIVATE)
     private val isGardenRegistered: SharedPreferences = context.getSharedPreferences("gardenRegister", Context.MODE_PRIVATE)
+    private val gardenLocation: SharedPreferences = context.getSharedPreferences("gardenLocation", Context.MODE_PRIVATE)
 
     fun userInfoGetString(key: String, defValueStr: String): String {
         return userInfo.getString(key, defValueStr).toString()
@@ -39,6 +40,16 @@ class PreferenceUtil (context: Context) {
     }
     fun gardenRegisterGetBool(key: String, defValueBool: Boolean): Boolean {
         return isGardenRegistered.getBoolean(key, defValueBool)
+    }
+    fun gardenLocationSetLocation(key: String, float1: Float, float2: Float) {
+        gardenLocation.edit().putFloat(key + "x", float1).apply()
+        gardenLocation.edit().putFloat(key + "y", float2).apply()
+    }
+    fun gardenLocationGetLocation(key: String): List<Float> {
+        return listOf(
+            gardenLocation.getFloat(key + "x", 1.0f),
+            gardenLocation.getFloat(key + "y", 1.0f)
+        )
     }
 
 }

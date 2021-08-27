@@ -34,6 +34,7 @@ class GardenRegistration : AppCompatActivity() {
             }
         }
 
+
         supportFragmentManager.beginTransaction()
             .replace(R.id.google_map_fragment, GoogleMapView())
             .commit()

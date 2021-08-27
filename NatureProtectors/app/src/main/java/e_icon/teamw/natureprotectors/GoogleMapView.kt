@@ -14,6 +14,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 lateinit var gardenLocation: LatLng
+var isInGardenInfo = false
 
 class GoogleMapView : Fragment(), OnMapReadyCallback, GoogleMap.OnMapLongClickListener {
 
@@ -292,8 +293,17 @@ class GoogleMapView : Fragment(), OnMapReadyCallback, GoogleMap.OnMapLongClickLi
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
-        if (countryLatLngList[userCountry] != null) {
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(countryLatLngList[userCountry]))
+        gardenLocation = LatLng(Prefs.infos.gardenLocationGetLocation("Garden")[0].toDouble(), Prefs.infos.gardenLocationGetLocation("Garden")[1].toDouble())
+        if(isInGardenInfo) {
+            val markerOptions = MarkerOptions()
+            markerOptions.position(gardenLocation)
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(gardenLocation))
+            googleMap.addMarker(markerOptions)
+        }
+        else {
+            if (countryLatLngList[userCountry] != null) {
+                googleMap.moveCamera(CameraUpdateFactory.newLatLng(countryLatLngList[userCountry]))
+            }
         }
         googleMap.moveCamera(CameraUpdateFactory.zoomTo(5f))
         map = googleMap
@@ -328,6 +338,7 @@ class GoogleMapView : Fragment(), OnMapReadyCallback, GoogleMap.OnMapLongClickLi
         val markerOptions = MarkerOptions()
         markerOptions.position(point)
         gardenLocation = point
+        Prefs.infos.gardenLocationSetLocation("Garden", gardenLocation.latitude.toFloat(), gardenLocation.longitude.toFloat())
         map.clear()
         map.animateCamera(CameraUpdateFactory.newLatLng(point))
         map.addMarker(markerOptions)

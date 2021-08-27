@@ -15,11 +15,11 @@ class Start : AppCompatActivity() {
 
         binding.startStartButton.setOnClickListener {
             when {
-                Prefs.infos.registerGetBool("isRegistered", false) -> {
+                Prefs.infos.registerGetBool("isRegistered", false) && Prefs.infos.gardenRegisterGetBool("isGardenRegistered", false) -> {
                     val gardenInfoIntent = Intent(this, GardenInfo::class.java)
                     startActivity(gardenInfoIntent)
                 }
-                Prefs.infos.gardenRegisterGetBool("isGardenRegistered", false) -> {
+                Prefs.infos.registerGetBool("isRegistered", false) && Prefs.infos.gardenRegisterGetBool("isGardenRegistered", true) -> {
                     val gardenRegistrationIntent = Intent(this, GardenRegistration::class.java)
                     startActivity(gardenRegistrationIntent)
                 }

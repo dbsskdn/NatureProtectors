@@ -1,14 +1,18 @@
 package e_icon.teamw.natureprotectors
 
 import android.content.Intent
+import android.media.MediaPlayer
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import e_icon.teamw.natureprotectors.data.Datasource
 import e_icon.teamw.natureprotectors.adapter.ItemAdapter
 import e_icon.teamw.natureprotectors.databinding.ActivityGardenBlueprintBinding
+import java.time.LocalDate
 
 private lateinit var binding: ActivityGardenBlueprintBinding
 var guidelinePlant = ""
@@ -16,8 +20,20 @@ private var numOfItems = 36
 private var numRows = 6
 private var numCols = 6
 private var spanCount = 6
+var selectedItem = 0
+var blueprintPlants = mutableListOf(
+    "none", "none", "none", "none", "none", "none",
+    "none", "none", "none", "none", "none", "none",
+    "none", "none", "none", "none", "none", "none",
+    "none", "none", "none", "none", "none", "none",
+    "none", "none", "none", "none", "none", "none",
+    "none", "none", "none", "none", "none", "none")
+@RequiresApi(Build.VERSION_CODES.O)
+var gardenDate: LocalDate = LocalDate.now()
 
 class GardenBlueprint : AppCompatActivity() {
+
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityGardenBlueprintBinding.inflate(layoutInflater)
@@ -27,7 +43,6 @@ class GardenBlueprint : AppCompatActivity() {
             binding.gardenBlueprintProgressText.text = Prefs.infos.gardenInfoGetString("gardenName", gardenName)
             binding.gardenBlueprintProgressNext.visibility = View.GONE
         }
-
         if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("tomato") == true){
             binding.gardenBlueprintDragPlantsTomato.visibility = View.VISIBLE
         }
@@ -103,6 +118,31 @@ class GardenBlueprint : AppCompatActivity() {
             }
         }
 
+
+        binding.gardenBlueprintAddTomato.setOnClickListener {
+            blueprintPlants[selectedItem] = "tomato"
+        }
+
+        binding.gardenBlueprintAddPotato.setOnClickListener {
+            blueprintPlants[selectedItem] = "potato"
+        }
+
+        binding.gardenBlueprintAddLettuce.setOnClickListener {
+            blueprintPlants[selectedItem] = "lettuce"
+        }
+
+        binding.gardenBlueprintAddCherry.setOnClickListener {
+            blueprintPlants[selectedItem] = "cherry"
+        }
+
+        binding.gardenBlueprintAddSunflower.setOnClickListener {
+            blueprintPlants[selectedItem] = "sunflower"
+        }
+
+        binding.gardenBlueprintRemove.setOnClickListener {
+            blueprintPlants[selectedItem] = "none"
+        }
+
         binding.gardenBlueprintDragPlantsTomato.setOnClickListener {
             guidelinePlant = "tomato"
             goToGuideline()
@@ -130,6 +170,7 @@ class GardenBlueprint : AppCompatActivity() {
 
         binding.gardenBlueprintProgressNext.setOnClickListener {
             Prefs.infos.gardenRegisterSetBool("isGardenRegistered", true)
+            gardenDate = LocalDate.now()
             val gardenInfoIntent = Intent(this, GardenInfo::class.java)
             startActivity(gardenInfoIntent)
         }
@@ -143,12 +184,11 @@ class GardenBlueprint : AppCompatActivity() {
 
     private fun updateTable() {
         val myDataset = Datasource().loadAffirmations(numOfItems) // Initialize data
-
         val recyclerView = binding.recyclerView
         recyclerView.isNestedScrollingEnabled = false
         recyclerView.overScrollMode = View.OVER_SCROLL_NEVER
-        recyclerView.adapter = ItemAdapter(this, myDataset)
+        recyclerView.adapter = ItemAdapter(myDataset)
         (recyclerView.layoutManager as GridLayoutManager).spanCount = spanCount
-        recyclerView.adapter = ItemAdapter(this, myDataset)
+        recyclerView.adapter = ItemAdapter(myDataset)
     }
 }
