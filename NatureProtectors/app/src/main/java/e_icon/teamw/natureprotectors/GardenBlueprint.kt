@@ -1,7 +1,6 @@
 package e_icon.teamw.natureprotectors
 
 import android.content.Intent
-import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -9,18 +8,17 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import e_icon.teamw.natureprotectors.data.Datasource
 import e_icon.teamw.natureprotectors.adapter.ItemAdapter
-import e_icon.teamw.natureprotectors.databinding.ActivityGardenBlueprintBinding
+import e_icon.teamw.natureprotectors.adapter.position
+import e_icon.teamw.natureprotectors.data.Datasource
 import java.time.LocalDate
+import e_icon.teamw.natureprotectors.databinding.ActivityGardenBlueprintBinding
 
 private lateinit var binding: ActivityGardenBlueprintBinding
 var guidelinePlant = ""
-private var numOfItems = 36
 private var numRows = 6
 private var numCols = 6
 private var spanCount = 6
-var selectedItem = 0
 var blueprintPlants = mutableListOf(
     "none", "none", "none", "none", "none", "none",
     "none", "none", "none", "none", "none", "none",
@@ -32,6 +30,7 @@ var blueprintPlants = mutableListOf(
 var gardenDate: LocalDate = LocalDate.now()
 
 class GardenBlueprint : AppCompatActivity() {
+    private lateinit var tableItemClickAdapter: ItemAdapter
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -70,77 +69,99 @@ class GardenBlueprint : AppCompatActivity() {
             }
         }
 
-        updateTable()
-
-        binding.gardenBlueprintGridDeclineRow.setOnClickListener {
-            if(numRows > 1){
-                numRows--
-                numOfItems -= numCols
+        binding.gardenBlueprintGridIncreaseRow.setOnClickListener {
+            if (numRows < 6) {
+                numRows ++
+                val addList: MutableList<String> = mutableListOf()
+                for (i: Int in 1..numCols){
+                    addList += "none"
+                }
+                blueprintPlants.addAll(addList)
                 updateTable()
             }
             else {
-                Toast.makeText(applicationContext, "The row can deleted up to 1!", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext, "The row can be added up to 6!", Toast.LENGTH_LONG).show()
             }
         }
 
-        binding.gardenBlueprintGridIncreaseRow.setOnClickListener {
-            if(numRows < 6) {
-                numRows++
-                numOfItems += numCols
+        binding.gardenBlueprintGridDeclineRow.setOnClickListener {
+            if (numRows > 1) {
+                numRows --
+                for (i: Int in 1..numCols){
+                    blueprintPlants.removeAt(numRows * numCols)
+                }
                 updateTable()
             }
             else {
-                Toast.makeText(applicationContext, "The row can added up to 6!", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext, "The row can be removed up to 1!", Toast.LENGTH_LONG).show()
             }
         }
 
         binding.gardenBlueprintGridIncreaseColumn.setOnClickListener {
-            if(numCols < 6 && spanCount < 6){
-                numCols++
-                numOfItems += numRows
-                spanCount++
+            if (numCols < 6 && spanCount < 6) {
+                numCols ++
+                spanCount ++
+                for (i: Int in 1..numRows) {
+                    blueprintPlants.add((numCols * i) - i, "none")
+                }
                 updateTable()
             }
             else {
-                Toast.makeText(applicationContext, "The column can added up to 6!", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext, "The column can be added up to 6!", Toast.LENGTH_LONG).show()
             }
         }
 
         binding.gardenBlueprintGridDeclineColumn.setOnClickListener {
-            if(numCols > 1 && spanCount > 1){
-                numCols--
-                numOfItems -= numRows
-                spanCount--
+            if (numCols > 1 && spanCount > 1) {
+                numCols --
+                spanCount --
+                for (i: Int in 1..numRows){
+                    blueprintPlants.removeAt(i * numCols)
+                }
                 updateTable()
             }
             else {
-                Toast.makeText(applicationContext, "The column can deleted up to 1!", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext, "The column can be removed up to 1!", Toast.LENGTH_LONG).show()
             }
         }
 
+        updateTable()
+
+        tableItemClickAdapter.onItemClickListener = {
+            binding.gardenBlueprintAddItems.visibility = View.VISIBLE
+            binding.gardenBlueprintAddItemBg.visibility = View.VISIBLE
+        }
+
+        tableItemClickAdapter.onItemClickListener
 
         binding.gardenBlueprintAddTomato.setOnClickListener {
-            blueprintPlants[selectedItem] = "tomato"
+            blueprintPlants[position] = "tomato"
+            updateTable()
         }
 
         binding.gardenBlueprintAddPotato.setOnClickListener {
-            blueprintPlants[selectedItem] = "potato"
+            blueprintPlants[position] = "potato"
+            updateTable()
         }
 
         binding.gardenBlueprintAddLettuce.setOnClickListener {
-            blueprintPlants[selectedItem] = "lettuce"
+            blueprintPlants[position] = "lettuce"
+            updateTable()
         }
 
         binding.gardenBlueprintAddCherry.setOnClickListener {
-            blueprintPlants[selectedItem] = "cherry"
+            blueprintPlants[position] = "cherry"
+            updateTable()
         }
 
         binding.gardenBlueprintAddSunflower.setOnClickListener {
-            blueprintPlants[selectedItem] = "sunflower"
+            blueprintPlants[position] = "sunflower"
+            updateTable()
         }
 
         binding.gardenBlueprintRemove.setOnClickListener {
-            blueprintPlants[selectedItem] = "none"
+            blueprintPlants[position] = "none"
+            updateTable()
         }
 
         binding.gardenBlueprintDragPlantsTomato.setOnClickListener {
@@ -183,12 +204,13 @@ class GardenBlueprint : AppCompatActivity() {
     }
 
     private fun updateTable() {
-        val myDataset = Datasource().loadAffirmations(numOfItems) // Initialize data
+        val myDataset = Datasource().loadTable(blueprintPlants)
         val recyclerView = binding.recyclerView
         recyclerView.isNestedScrollingEnabled = false
         recyclerView.overScrollMode = View.OVER_SCROLL_NEVER
         recyclerView.adapter = ItemAdapter(myDataset)
         (recyclerView.layoutManager as GridLayoutManager).spanCount = spanCount
-        recyclerView.adapter = ItemAdapter(myDataset)
+        tableItemClickAdapter = ItemAdapter(myDataset)
+        recyclerView.adapter = tableItemClickAdapter
     }
 }

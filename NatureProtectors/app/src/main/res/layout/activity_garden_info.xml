@@ -229,7 +229,7 @@
             android:layout_marginBottom="12dp"
             android:contentDescription="@string/StringValueForImageView"
             android:visibility="gone"
-            app:srcCompat="@drawable/garden_blueprint_add_item_tomato" />
+            app:srcCompat="@drawable/garden_blueprint_drag_plants_tomato" />
 
         <ImageView
             android:id="@+id/garden_info_garden_potato"

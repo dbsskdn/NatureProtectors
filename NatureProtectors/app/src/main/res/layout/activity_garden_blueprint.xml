@@ -237,97 +237,106 @@
         android:id="@+id/garden_blueprint_add_item_bg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/StringValueForImageView"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/garden_blueprint_smarty_says"
-        app:layout_constraintEnd_toEndOf="@+id/garden_blueprint_smarty_says"
-        app:layout_constraintStart_toStartOf="@+id/garden_blueprint_smarty_says"
-        app:srcCompat="@drawable/garden_blueprint_add_item_bg" />
+        app:layout_constraintBottom_toTopOf="@+id/garden_blueprint_smarty_char"
+        app:layout_constraintStart_toStartOf="@+id/garden_blueprint_smarty_char"
+        app:srcCompat="@drawable/garden_blueprint_add_item_bg"
+        tools:visibility="visible" />
 
-    <LinearLayout
-        android:id="@+id/garden_blueprint_add_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="2dp"
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/garden_blueprint_add_items"
+        android:layout_width="70dp"
+        android:layout_height="104dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/garden_blueprint_add_item_bg"
         app:layout_constraintEnd_toEndOf="@+id/garden_blueprint_add_item_bg"
         app:layout_constraintStart_toStartOf="@+id/garden_blueprint_add_item_bg"
-        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_add_item_bg">
+        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_add_item_bg"
+        tools:visibility="visible">
 
         <ImageButton
             android:id="@+id/garden_blueprint_add_tomato"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:background="#00FFFFFF"
             android:contentDescription="@string/StringValueForImageButton"
             android:minHeight="24dp"
-            app:srcCompat="@drawable/garden_blueprint_add_item_tomato"
+            app:srcCompat="@drawable/garden_blueprint_add_tomato"
             tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
         <ImageButton
-            android:id="@+id/garden_blueprint_add_potato"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/StringValueForImageButton"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/garden_blueprint_add_item_potato"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <ImageButton
             android:id="@+id/garden_blueprint_add_lettuce"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:background="#00FFFFFF"
             android:contentDescription="@string/StringValueForImageButton"
             android:minHeight="24dp"
-            app:srcCompat="@drawable/garden_blueprint_add_item_lettuce"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <ImageButton
-            android:id="@+id/garden_blueprint_add_cherry"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/StringValueForImageButton"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/garden_blueprint_add_item_cherry"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/garden_blueprint_add_lettuce"
             tools:ignore="TouchTargetSizeCheck" />
 
         <ImageButton
             android:id="@+id/garden_blueprint_add_sunflower"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:background="#00FFFFFF"
             android:contentDescription="@string/StringValueForImageButton"
             android:minHeight="24dp"
-            app:srcCompat="@drawable/garden_blueprint_add_item_sunflower"
+            app:layout_column="0"
+            app:layout_row="2"
+            app:srcCompat="@drawable/garden_blueprint_add_sunflower"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/garden_blueprint_add_cherry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/StringValueForImageButton"
+            android:minHeight="24dp"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:srcCompat="@drawable/garden_blueprint_add_cherry"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/garden_blueprint_add_potato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/StringValueForImageButton"
+            android:minHeight="24dp"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/garden_blueprint_add_potato"
             tools:ignore="TouchTargetSizeCheck" />
 
         <ImageButton
             android:id="@+id/garden_blueprint_remove"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:background="#00FFFFFF"
             android:contentDescription="@string/StringValueForImageButton"
             android:minHeight="24dp"
-            app:srcCompat="@drawable/garden_blueprint_add_item_del"
+            app:layout_column="1"
+            app:layout_row="2"
+            app:srcCompat="@drawable/garden_blueprint_remove"
             tools:ignore="TouchTargetSizeCheck" />
-    </LinearLayout>
+    </androidx.gridlayout.widget.GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

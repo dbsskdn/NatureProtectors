@@ -24,10 +24,12 @@
         <entry key="app/src/main/res/layout/activity_user_registration2.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/countryDropdownItems.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/country_dropdown_items.xml" value="0.5359375" />
+        <entry key="app/src/main/res/layout/gallery_img.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_blueprint_add_item.xml" value="1.5" />
         <entry key="app/src/main/res/layout/garden_blueprint_drag_plants.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_blueprint_grid_item.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_blueprint_table_item.xml" value="0.5359375" />
+        <entry key="app/src/main/res/layout/garden_blueprint_table_items.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_info_map.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/garden_registration_map.xml" value="0.5359375" />
         <entry key="app/src/main/res/layout/license.xml" value="0.45" />

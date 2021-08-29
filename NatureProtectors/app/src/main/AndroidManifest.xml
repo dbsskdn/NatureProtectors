@@ -62,8 +62,18 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDEPEv8t1a-77e2q2cC5eql5UMCE1pXyGY" />
-
-
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="e_icon.teamw.natureprotectors"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
     </application>
 
 </manifest>

@@ -293,7 +293,9 @@ class GoogleMapView : Fragment(), OnMapReadyCallback, GoogleMap.OnMapLongClickLi
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
+        userCountry = Prefs.infos.userInfoGetString("userCountry", "South Korea")
         gardenLocation = LatLng(Prefs.infos.gardenLocationGetLocation("Garden")[0].toDouble(), Prefs.infos.gardenLocationGetLocation("Garden")[1].toDouble())
+        val userCountryLocation = countryLatLngList[userCountry]
         if(isInGardenInfo) {
             val markerOptions = MarkerOptions()
             markerOptions.position(gardenLocation)
@@ -301,8 +303,8 @@ class GoogleMapView : Fragment(), OnMapReadyCallback, GoogleMap.OnMapLongClickLi
             googleMap.addMarker(markerOptions)
         }
         else {
-            if (countryLatLngList[userCountry] != null) {
-                googleMap.moveCamera(CameraUpdateFactory.newLatLng(countryLatLngList[userCountry]))
+            if (userCountryLocation != null) {
+                googleMap.moveCamera(CameraUpdateFactory.newLatLng(userCountryLocation))
             }
         }
         googleMap.moveCamera(CameraUpdateFactory.zoomTo(5f))
