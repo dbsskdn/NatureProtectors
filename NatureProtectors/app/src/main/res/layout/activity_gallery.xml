@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="@+id/gallery_grid"
         app:layout_constraintTop_toTopOf="@+id/button" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/button"
         android:layout_width="48dp"
         android:layout_height="56dp"
@@ -30,7 +30,7 @@
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/gallerys_back" />
+        android:src="@drawable/gallerys_back" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/gallery_grid"

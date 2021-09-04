@@ -15,6 +15,8 @@ class PlantsSelection : AppCompatActivity() {
         binding = ActivityPlantsSelectionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        gardenPlants = mutableSetOf()
+
         binding.plantsSelectionProgressPrev.setOnClickListener {
             val gardenRegistrationIntent = Intent(this, GardenRegistration::class.java)
             startActivity(gardenRegistrationIntent)

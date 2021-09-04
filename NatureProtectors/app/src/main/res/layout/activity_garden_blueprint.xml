@@ -242,8 +242,7 @@
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/garden_blueprint_smarty_char"
         app:layout_constraintStart_toStartOf="@+id/garden_blueprint_smarty_char"
-        app:srcCompat="@drawable/garden_blueprint_add_item_bg"
-        tools:visibility="visible" />
+        app:srcCompat="@drawable/garden_blueprint_add_item_bg" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/garden_blueprint_add_items"
@@ -253,8 +252,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/garden_blueprint_add_item_bg"
         app:layout_constraintEnd_toEndOf="@+id/garden_blueprint_add_item_bg"
         app:layout_constraintStart_toStartOf="@+id/garden_blueprint_add_item_bg"
-        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_add_item_bg"
-        tools:visibility="visible">
+        app:layout_constraintTop_toTopOf="@+id/garden_blueprint_add_item_bg">
 
         <ImageButton
             android:id="@+id/garden_blueprint_add_tomato"

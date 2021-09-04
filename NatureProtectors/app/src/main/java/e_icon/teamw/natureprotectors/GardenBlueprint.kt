@@ -38,10 +38,6 @@ class GardenBlueprint : AppCompatActivity() {
         binding = ActivityGardenBlueprintBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if (Prefs.infos.gardenRegisterGetBool("isGardenRegistered", false)) {
-            binding.gardenBlueprintProgressText.text = Prefs.infos.gardenInfoGetString("gardenName", gardenName)
-            binding.gardenBlueprintProgressNext.visibility = View.GONE
-        }
         if (Prefs.infos.gardenPlantsGetStringSet("gardenPlants", setOf())?.contains("tomato") == true){
             binding.gardenBlueprintDragPlantsTomato.visibility = View.VISIBLE
         }
@@ -78,9 +74,11 @@ class GardenBlueprint : AppCompatActivity() {
                 }
                 blueprintPlants.addAll(addList)
                 updateTable()
+                blueprintEdit()
             }
             else {
                 Toast.makeText(applicationContext, "The row can be added up to 6!", Toast.LENGTH_LONG).show()
+                blueprintEdit()
             }
         }
 
@@ -91,9 +89,11 @@ class GardenBlueprint : AppCompatActivity() {
                     blueprintPlants.removeAt(numRows * numCols)
                 }
                 updateTable()
+                blueprintEdit()
             }
             else {
                 Toast.makeText(applicationContext, "The row can be removed up to 1!", Toast.LENGTH_LONG).show()
+                blueprintEdit()
             }
         }
 
@@ -105,9 +105,11 @@ class GardenBlueprint : AppCompatActivity() {
                     blueprintPlants.add((numCols * i) - i, "none")
                 }
                 updateTable()
+                blueprintEdit()
             }
             else {
                 Toast.makeText(applicationContext, "The column can be added up to 6!", Toast.LENGTH_LONG).show()
+                blueprintEdit()
             }
         }
 
@@ -119,9 +121,11 @@ class GardenBlueprint : AppCompatActivity() {
                     blueprintPlants.removeAt(i * numCols)
                 }
                 updateTable()
+                blueprintEdit()
             }
             else {
                 Toast.makeText(applicationContext, "The column can be removed up to 1!", Toast.LENGTH_LONG).show()
+                blueprintEdit()
             }
         }
 
@@ -131,8 +135,6 @@ class GardenBlueprint : AppCompatActivity() {
             binding.gardenBlueprintAddItems.visibility = View.VISIBLE
             binding.gardenBlueprintAddItemBg.visibility = View.VISIBLE
         }
-
-        tableItemClickAdapter.onItemClickListener
 
         binding.gardenBlueprintAddTomato.setOnClickListener {
             blueprintPlants[position] = "tomato"
@@ -189,8 +191,23 @@ class GardenBlueprint : AppCompatActivity() {
             goToGuideline()
         }
 
+        if (Prefs.infos.gardenRegisterGetBool("isGardenRegistered", false)) {
+            binding.gardenBlueprintProgressText.text = Prefs.infos.gardenInfoGetString("gardenName", gardenName)
+            binding.gardenBlueprintProgressNext.visibility = View.GONE
+            blueprintPlants = mutableListOf()
+            for (i: Int in 0 until Prefs.infos.gardenBlueprintNumGet("blueprintNum", 36)){
+                Prefs.infos.gardenBlueprintGetPlants("gardenBlueprint$i", "none")?.let {
+                    blueprintPlants.add(
+                        it
+                    )
+                }
+            }
+        }
+
+        saveBlueprint()
+
         binding.gardenBlueprintProgressNext.setOnClickListener {
-            Prefs.infos.gardenRegisterSetBool("isGardenRegistered", true)
+            saveBlueprint()
             gardenDate = LocalDate.now()
             val gardenInfoIntent = Intent(this, GardenInfo::class.java)
             startActivity(gardenInfoIntent)
@@ -212,5 +229,18 @@ class GardenBlueprint : AppCompatActivity() {
         (recyclerView.layoutManager as GridLayoutManager).spanCount = spanCount
         tableItemClickAdapter = ItemAdapter(myDataset)
         recyclerView.adapter = tableItemClickAdapter
+    }
+
+    private fun blueprintEdit() {
+        tableItemClickAdapter.onItemClickListener = {
+            binding.gardenBlueprintAddItems.visibility = View.VISIBLE
+            binding.gardenBlueprintAddItemBg.visibility = View.VISIBLE
+        }
+    }
+
+    private fun saveBlueprint() {
+        Prefs.infos.gardenRegisterSetBool("isGardenRegistered", true)
+        Prefs.infos.gardenBlueprintSetPlants("gardenBlueprint", blueprintPlants)
+        Prefs.infos.gardenBlueprintNumSet("blueprintNum", blueprintPlants.size)
     }
 }

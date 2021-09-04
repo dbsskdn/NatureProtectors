@@ -28,7 +28,7 @@
         tools:ignore="ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/garden_info_del_garden_btn"
+        android:id="@+id/garden_info_camera_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -37,21 +37,6 @@
         android:minWidth="48dp"
         android:minHeight="56dp"
         app:layout_constraintEnd_toEndOf="@+id/garden_info_location"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/garden_info_del_garden_btn"
-        tools:ignore="DuplicateSpeakableTextCheck,MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/garden_info_camera_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="6dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/StringValueForImageButton"
-        android:minWidth="48dp"
-        android:minHeight="56dp"
-        app:layout_constraintEnd_toStartOf="@+id/garden_info_del_garden_btn"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/garden_info_camera_btn"
         tools:ignore="DuplicateSpeakableTextCheck,MissingConstraints" />
@@ -121,6 +106,18 @@
         app:layout_constraintTop_toBottomOf="@+id/garden_info_garden_gallery_bg"
         app:srcCompat="@drawable/garden_info_blueprint_btn" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/garden_info_gallery"
+        android:layout_width="308dp"
+        android:layout_height="170dp"
+        android:paddingStart="4dp"
+        android:paddingTop="34dp"
+        android:paddingEnd="84dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/garden_info_garden_gallery_bg"
+        app:layout_constraintEnd_toEndOf="@+id/garden_info_garden_gallery_bg"
+        app:layout_constraintStart_toStartOf="@+id/garden_info_garden_gallery_bg" />
+
     <TextView
         android:id="@+id/garden_info_garden_plants_txt"
         android:layout_width="wrap_content"
@@ -144,28 +141,6 @@
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/garden_info_garden_gallery_bg"
         app:layout_constraintTop_toTopOf="@+id/garden_info_garden_gallery_bg" />
-
-    <ImageView
-        android:id="@+id/garden_info_garden_gallery_sample_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/StringValueForImageView"
-        app:layout_constraintStart_toStartOf="@+id/garden_info_garden_gallery_txt"
-        app:layout_constraintTop_toBottomOf="@+id/garden_info_garden_gallery_txt"
-        app:srcCompat="@drawable/garden_info_garden_gallery_img" />
-
-    <TextView
-        android:id="@+id/garden_info_garden_gallery_sample_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/sample"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/garden_info_garden_gallery_sample_img"
-        app:layout_constraintEnd_toEndOf="@+id/garden_info_garden_gallery_sample_img"
-        app:layout_constraintStart_toStartOf="@+id/garden_info_garden_gallery_sample_img" />
 
     <ImageButton
         android:id="@+id/garden_info_gallery_btn"
@@ -192,6 +167,7 @@
         android:text="@string/sample"
         android:textAlignment="center"
         android:textColor="#000000"
+        android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="@+id/plants_selection_smarty_says_bg2"
         app:layout_constraintEnd_toEndOf="@+id/plants_selection_smarty_says_bg2"
         app:layout_constraintStart_toStartOf="@+id/plants_selection_smarty_says_bg2"

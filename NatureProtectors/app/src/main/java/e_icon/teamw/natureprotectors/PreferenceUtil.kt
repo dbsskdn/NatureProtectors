@@ -1,5 +1,6 @@
 package e_icon.teamw.natureprotectors
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 
@@ -10,6 +11,8 @@ class PreferenceUtil (context: Context) {
     private val gardenPlants: SharedPreferences = context.getSharedPreferences("gardenPlants", Context.MODE_PRIVATE)
     private val isGardenRegistered: SharedPreferences = context.getSharedPreferences("gardenRegister", Context.MODE_PRIVATE)
     private val gardenLocation: SharedPreferences = context.getSharedPreferences("gardenLocation", Context.MODE_PRIVATE)
+    private val gardenBlueprint: SharedPreferences = context.getSharedPreferences("gardenBlueprint", Context.MODE_PRIVATE)
+    private val blueprintNum: SharedPreferences = context.getSharedPreferences("blueprintNum", Context.MODE_PRIVATE)
 
     fun userInfoGetString(key: String, defValueStr: String): String {
         return userInfo.getString(key, defValueStr).toString()
@@ -51,5 +54,19 @@ class PreferenceUtil (context: Context) {
             gardenLocation.getFloat(key + "y", 1.0f)
         )
     }
-
+    @SuppressLint("CommitPrefEdits")
+    fun gardenBlueprintSetPlants(key: String, plants: List<String>) {
+        for (i: Int in plants.indices){
+            gardenBlueprint.edit().putString(key + "$i", plants[i])
+        }
+    }
+    fun gardenBlueprintGetPlants(key: String, defValuePlants: String): String? {
+        return gardenBlueprint.getString(key, defValuePlants)
+    }
+    fun gardenBlueprintNumSet(key: String, num: Int) {
+        blueprintNum.edit().putInt(key, num).apply()
+    }
+    fun gardenBlueprintNumGet(key: String, defValueInt: Int): Int{
+        return blueprintNum.getInt(key, defValueInt)
+    }
 }

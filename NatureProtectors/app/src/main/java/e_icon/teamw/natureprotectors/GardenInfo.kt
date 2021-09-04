@@ -16,6 +16,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.FileProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import e_icon.teamw.natureprotectors.adapter.GalleryAdapter
 import e_icon.teamw.natureprotectors.databinding.ActivityGardenInfoBinding
 import java.io.File
 import java.text.SimpleDateFormat
@@ -95,6 +98,12 @@ class GardenInfo : AppCompatActivity() {
                 }
             }
         }
+
+        val recyclerView = binding.gardenInfoGallery
+        recyclerView.isNestedScrollingEnabled = false
+        recyclerView.overScrollMode = View.OVER_SCROLL_NEVER
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        recyclerView.adapter = GalleryAdapter(galleryImgs)
     }
     override fun onRequestPermissionsResult(
         requestCode: Int,

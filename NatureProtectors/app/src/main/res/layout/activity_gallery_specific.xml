@@ -32,7 +32,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/gallery_specific_img_del"
         android:layout_width="56dp"
         android:layout_height="56dp"
@@ -42,10 +42,10 @@
         android:contentDescription="@string/StringValueForImageButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/garden_info_del_garden_btn"
+        android:src="@drawable/garden_info_del_garden_btn"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/gallery_specific_back"
         android:layout_width="48dp"
         android:layout_height="56dp"
@@ -55,6 +55,6 @@
         android:contentDescription="@string/StringValueForImageButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/progress_prev" />
+        android:src="@drawable/progress_prev" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

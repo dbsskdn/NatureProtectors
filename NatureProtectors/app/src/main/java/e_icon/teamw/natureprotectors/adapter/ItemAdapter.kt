@@ -8,7 +8,6 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import e_icon.teamw.natureprotectors.model.GardenBlueprintTable
 import e_icon.teamw.natureprotectors.R
-import e_icon.teamw.natureprotectors.blueprintPlants
 
 var position: Int = 0
 class ItemAdapter(private val dataset: List<GardenBlueprintTable>
